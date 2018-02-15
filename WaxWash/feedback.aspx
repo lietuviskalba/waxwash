@@ -58,109 +58,109 @@
                 <tr>
                     <td class="auto-style3">Price</td>
                     <td class="auto-style2">
-                        <asp:RadioButton ID="RadioButton1" runat="server" Text="1" />
+                        <asp:RadioButton ID="rdoP1" runat="server" Text="1" GroupName="price" />
                     </td>
                     <td class="auto-style2">
-                        <asp:RadioButton ID="RadioButton7" runat="server" Text="2" />
+                        <asp:RadioButton ID="rdoP2" runat="server" Text="2" GroupName="price" />
                     </td>
                     <td class="auto-style2">
-                        <asp:RadioButton ID="RadioButton13" runat="server" Text="3" />
+                        <asp:RadioButton ID="rdoP3" runat="server" Text="3" GroupName="price" />
                     </td>
                     <td class="auto-style2">
-                        <asp:RadioButton ID="RadioButton19" runat="server" Text="4" />
+                        <asp:RadioButton ID="rdoP4" runat="server" Text="4" GroupName="price" />
                     </td>
                     <td class="auto-style2">
-                        <asp:RadioButton ID="RadioButton25" runat="server" Text="5" />
+                        <asp:RadioButton ID="rdoP5" runat="server" Text="5" GroupName="price" />
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">Length</td>
                     <td>
-                        <asp:RadioButton ID="RadioButton2" runat="server" Text="1" />
+                        <asp:RadioButton ID="rdoL1" runat="server" Text="1" GroupName="length" />
                     </td>
                     <td>
-                        <asp:RadioButton ID="RadioButton8" runat="server" Text="2" />
+                        <asp:RadioButton ID="rdoL2" runat="server" Text="2" GroupName="length" />
                     </td>
                     <td>
-                        <asp:RadioButton ID="RadioButton14" runat="server" Text="3" />
+                        <asp:RadioButton ID="rdoL3" runat="server" Text="3" GroupName="length" />
                     </td>
                     <td>
-                        <asp:RadioButton ID="RadioButton20" runat="server" Text="4" />
+                        <asp:RadioButton ID="rdoL4" runat="server" Text="4" GroupName="length" />
                     </td>
                     <td>
-                        <asp:RadioButton ID="RadioButton26" runat="server" Text="5" />
+                        <asp:RadioButton ID="rdoL5" runat="server" Text="5" GroupName="length" />
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style5">Customer Service</td>
                     <td class="auto-style6">
-                        <asp:RadioButton ID="RadioButton3" runat="server" Text="1" />
+                        <asp:RadioButton ID="rdoS1" runat="server" Text="1" GroupName="customerService" />
                     </td>
                     <td class="auto-style6">
-                        <asp:RadioButton ID="RadioButton9" runat="server" Text="2" />
+                        <asp:RadioButton ID="rdoS2" runat="server" Text="2" GroupName="customerService" />
                     </td>
                     <td class="auto-style6">
-                        <asp:RadioButton ID="RadioButton15" runat="server" Text="3" />
+                        <asp:RadioButton ID="rdoS3" runat="server" Text="3" GroupName="customerService" />
                     </td>
                     <td class="auto-style6">
-                        <asp:RadioButton ID="RadioButton21" runat="server" Text="4" />
+                        <asp:RadioButton ID="rdoS4" runat="server" Text="4" GroupName="customerService" OnCheckedChanged="RadioButton21_CheckedChanged" />
                     </td>
                     <td class="auto-style6">
-                        <asp:RadioButton ID="RadioButton27" runat="server" Text="5" />
+                        <asp:RadioButton ID="rdoS5" runat="server" Text="5" GroupName="customerService" />
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style5">Web Service</td>
                     <td class="auto-style6">
-                        <asp:RadioButton ID="RadioButton4" runat="server" Text="1" />
+                        <asp:RadioButton ID="rdoWS1" runat="server" Text="1" GroupName="webService" />
                     </td>
                     <td class="auto-style6">
-                        <asp:RadioButton ID="RadioButton10" runat="server" Text="2" />
+                        <asp:RadioButton ID="rdoWS2" runat="server" Text="2" GroupName="webService" />
                     </td>
                     <td class="auto-style6">
-                        <asp:RadioButton ID="RadioButton16" runat="server" Text="3" />
+                        <asp:RadioButton ID="rdoWS3" runat="server" Text="3" GroupName="webService" OnCheckedChanged="RadioButton16_CheckedChanged" />
                     </td>
                     <td class="auto-style6">
-                        <asp:RadioButton ID="RadioButton22" runat="server" Text="4" />
+                        <asp:RadioButton ID="rdoWS4" runat="server" Text="4" GroupName="webService" />
                     </td>
                     <td class="auto-style6">
-                        <asp:RadioButton ID="RadioButton28" runat="server" Text="5" />
+                        <asp:RadioButton ID="rdoWS5" runat="server" Text="5" GroupName="webService" />
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">Program quality</td>
                     <td>
-                        <asp:RadioButton ID="RadioButton5" runat="server" Text="1" />
+                        <asp:RadioButton ID="rdoPQ1" runat="server" Text="1" GroupName="programQuality" />
                     </td>
                     <td>
-                        <asp:RadioButton ID="RadioButton11" runat="server" Text="2" />
+                        <asp:RadioButton ID="rdoPQ2" runat="server" Text="2" GroupName="programQuality" />
                     </td>
                     <td>
-                        <asp:RadioButton ID="RadioButton17" runat="server" Text="3" />
+                        <asp:RadioButton ID="rdoPQ3" runat="server" Text="3" GroupName="programQuality" OnCheckedChanged="RadioButton17_CheckedChanged" />
                     </td>
                     <td>
-                        <asp:RadioButton ID="RadioButton23" runat="server" Text="4" />
+                        <asp:RadioButton ID="rdoPQ4" runat="server" Text="4" GroupName="programQuality" />
                     </td>
                     <td>
-                        <asp:RadioButton ID="RadioButton29" runat="server" Text="5" />
+                        <asp:RadioButton ID="rdoPQ5" runat="server" Text="5" GroupName="programQuality" />
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">Overall</td>
                     <td>
-                        <asp:RadioButton ID="RadioButton6" runat="server" Text="1" />
+                        <asp:RadioButton ID="rdoO1" runat="server" Text="1" GroupName="overall" />
                     </td>
                     <td>
-                        <asp:RadioButton ID="RadioButton12" runat="server" Text="2" />
+                        <asp:RadioButton ID="rdoO2" runat="server" Text="2" GroupName="overall" />
                     </td>
                     <td>
-                        <asp:RadioButton ID="RadioButton18" runat="server" Text="3" />
+                        <asp:RadioButton ID="rdoO3" runat="server" Text="3" GroupName="overall" />
                     </td>
                     <td>
-                        <asp:RadioButton ID="RadioButton24" runat="server" Text="4" />
+                        <asp:RadioButton ID="rdoO4" runat="server" Text="4" GroupName="overall" />
                     </td>
                     <td>
-                        <asp:RadioButton ID="RadioButton30" runat="server" Text="5" />
+                        <asp:RadioButton ID="rdoO5" runat="server" Text="5" GroupName="overall" OnCheckedChanged="RadioButton30_CheckedChanged" />
                     </td>
                 </tr>
             </table>
