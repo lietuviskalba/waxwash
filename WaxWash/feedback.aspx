@@ -54,9 +54,11 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="rdlProgramQual" Display="Dynamic" ErrorMessage="Ups! You forgot to give us feedback on the program quality!"></asp:RequiredFieldValidator>
         </h3>
         <h3 style="width: 495px">
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="rdlOverall" Display="Dynamic" ErrorMessage="Ups! You forgot to give us feedback on the price!"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="rdlOverall" Display="Dynamic" ErrorMessage="Ups! You forgot to give us feedback overall!"></asp:RequiredFieldValidator>
         </h3>
-        <p style="width: 495px">&nbsp;</p>
+        <h3 style="width: 495px">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="rdlWebService" Display="Dynamic" ErrorMessage="Ups! You forgot to give us feedback on the Web Services"></asp:RequiredFieldValidator>
+        </h3>
         <div>
             <table class="auto-style1">
                 <tr>
@@ -151,6 +153,7 @@
                 <asp:TextBox id="txtOther" TextMode="multiline" Columns="50" Rows="5" runat="server" /></p>
             <p>
                 <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit Feedback" Width="121px" />
+                <asp:Label ID="lblOutput" runat="server" Text="Label"></asp:Label>
             </p>
             <p>
 
@@ -176,7 +179,7 @@
 
             }
             document.getElementById("txtOther").value = "";
-            document.getElementById("ddlUsedProgram").selectedIndex = 0; 
+            document.getElementById("ddlUsedProgram").selectedIndex = 0;
 
         }
 
