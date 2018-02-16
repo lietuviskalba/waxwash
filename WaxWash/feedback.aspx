@@ -43,124 +43,87 @@
             </ul>
     </header>
     <main></main>
-    <h3>Give us your feedback!</h3>
     <form id="form1" runat="server">
+    <h3>Give us your feedback!</h3>
+        <h3 style="width: 260px">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="rdlPrice" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+        </h3>
         <div>
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style2">Terrible</td>
-                    <td class="auto-style2">Bad</td>
-                    <td class="auto-style2">Decent</td>
-                    <td class="auto-style2">Good</td>
-                    <td class="auto-style2">Excellent</td>
+                    <td class="auto-style2">Terrible&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bad&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Decent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Good&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Excellent&nbsp;&nbsp; </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">Price</td>
                     <td class="auto-style2">
-                        <asp:RadioButton ID="rdoP1" runat="server" Text="1" GroupName="price" />
-                    </td>
-                    <td class="auto-style2">
-                        <asp:RadioButton ID="rdoP2" runat="server" Text="2" GroupName="price" />
-                    </td>
-                    <td class="auto-style2">
-                        <asp:RadioButton ID="rdoP3" runat="server" Text="3" GroupName="price" />
-                    </td>
-                    <td class="auto-style2">
-                        <asp:RadioButton ID="rdoP4" runat="server" Text="4" GroupName="price" />
-                    </td>
-                    <td class="auto-style2">
-                        <asp:RadioButton ID="rdoP5" runat="server" Text="5" GroupName="price" />
+                        <asp:RadioButtonList ID="rdlPrice" runat="server" RepeatDirection="Horizontal" Width="100%">
+                            <asp:ListItem>1</asp:ListItem>
+                            <asp:ListItem>2</asp:ListItem>
+                            <asp:ListItem>3</asp:ListItem>
+                            <asp:ListItem>4</asp:ListItem>
+                            <asp:ListItem>5</asp:ListItem>
+                        </asp:RadioButtonList>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">Length</td>
                     <td>
-                        <asp:RadioButton ID="rdoL1" runat="server" Text="1" GroupName="length" />
-                    </td>
-                    <td>
-                        <asp:RadioButton ID="rdoL2" runat="server" Text="2" GroupName="length" />
-                    </td>
-                    <td>
-                        <asp:RadioButton ID="rdoL3" runat="server" Text="3" GroupName="length" />
-                    </td>
-                    <td>
-                        <asp:RadioButton ID="rdoL4" runat="server" Text="4" GroupName="length" />
-                    </td>
-                    <td>
-                        <asp:RadioButton ID="rdoL5" runat="server" Text="5" GroupName="length" />
+                        <asp:RadioButtonList ID="rdlLength" runat="server" RepeatDirection="Horizontal" Width="100%">
+                            <asp:ListItem>1</asp:ListItem>
+                            <asp:ListItem>2</asp:ListItem>
+                            <asp:ListItem>3</asp:ListItem>
+                            <asp:ListItem>4</asp:ListItem>
+                            <asp:ListItem>5</asp:ListItem>
+                        </asp:RadioButtonList>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style5">Customer Service</td>
                     <td class="auto-style6">
-                        <asp:RadioButton ID="rdoS1" runat="server" Text="1" GroupName="customerService" />
-                    </td>
-                    <td class="auto-style6">
-                        <asp:RadioButton ID="rdoS2" runat="server" Text="2" GroupName="customerService" />
-                    </td>
-                    <td class="auto-style6">
-                        <asp:RadioButton ID="rdoS3" runat="server" Text="3" GroupName="customerService" />
-                    </td>
-                    <td class="auto-style6">
-                        <asp:RadioButton ID="rdoS4" runat="server" Text="4" GroupName="customerService" OnCheckedChanged="RadioButton21_CheckedChanged" />
-                    </td>
-                    <td class="auto-style6">
-                        <asp:RadioButton ID="rdoS5" runat="server" Text="5" GroupName="customerService" />
+                        <asp:RadioButtonList ID="rdlCustService" runat="server" RepeatDirection="Horizontal" Width="100%">
+                            <asp:ListItem>1</asp:ListItem>
+                            <asp:ListItem>2</asp:ListItem>
+                            <asp:ListItem>3</asp:ListItem>
+                            <asp:ListItem>4</asp:ListItem>
+                            <asp:ListItem>5</asp:ListItem>
+                        </asp:RadioButtonList>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style5">Web Service</td>
                     <td class="auto-style6">
-                        <asp:RadioButton ID="rdoWS1" runat="server" Text="1" GroupName="webService" />
-                    </td>
-                    <td class="auto-style6">
-                        <asp:RadioButton ID="rdoWS2" runat="server" Text="2" GroupName="webService" />
-                    </td>
-                    <td class="auto-style6">
-                        <asp:RadioButton ID="rdoWS3" runat="server" Text="3" GroupName="webService" OnCheckedChanged="RadioButton16_CheckedChanged" />
-                    </td>
-                    <td class="auto-style6">
-                        <asp:RadioButton ID="rdoWS4" runat="server" Text="4" GroupName="webService" />
-                    </td>
-                    <td class="auto-style6">
-                        <asp:RadioButton ID="rdoWS5" runat="server" Text="5" GroupName="webService" />
+                        <asp:RadioButtonList ID="rdlWebService" runat="server" RepeatDirection="Horizontal" Width="100%">
+                            <asp:ListItem>1</asp:ListItem>
+                            <asp:ListItem>2</asp:ListItem>
+                            <asp:ListItem>3</asp:ListItem>
+                            <asp:ListItem>4</asp:ListItem>
+                            <asp:ListItem>5</asp:ListItem>
+                        </asp:RadioButtonList>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">Program quality</td>
                     <td>
-                        <asp:RadioButton ID="rdoPQ1" runat="server" Text="1" GroupName="programQuality" />
-                    </td>
-                    <td>
-                        <asp:RadioButton ID="rdoPQ2" runat="server" Text="2" GroupName="programQuality" />
-                    </td>
-                    <td>
-                        <asp:RadioButton ID="rdoPQ3" runat="server" Text="3" GroupName="programQuality" OnCheckedChanged="RadioButton17_CheckedChanged" />
-                    </td>
-                    <td>
-                        <asp:RadioButton ID="rdoPQ4" runat="server" Text="4" GroupName="programQuality" />
-                    </td>
-                    <td>
-                        <asp:RadioButton ID="rdoPQ5" runat="server" Text="5" GroupName="programQuality" />
+                        <asp:RadioButtonList ID="rdlProgramQual" runat="server" RepeatDirection="Horizontal" Width="100%">
+                            <asp:ListItem>1</asp:ListItem>
+                            <asp:ListItem>2</asp:ListItem>
+                            <asp:ListItem>3</asp:ListItem>
+                            <asp:ListItem>4</asp:ListItem>
+                            <asp:ListItem>5</asp:ListItem>
+                        </asp:RadioButtonList>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">Overall</td>
                     <td>
-                        <asp:RadioButton ID="rdoO1" runat="server" Text="1" GroupName="overall" />
-                    </td>
-                    <td>
-                        <asp:RadioButton ID="rdoO2" runat="server" Text="2" GroupName="overall" />
-                    </td>
-                    <td>
-                        <asp:RadioButton ID="rdoO3" runat="server" Text="3" GroupName="overall" />
-                    </td>
-                    <td>
-                        <asp:RadioButton ID="rdoO4" runat="server" Text="4" GroupName="overall" />
-                    </td>
-                    <td>
-                        <asp:RadioButton ID="rdoO5" runat="server" Text="5" GroupName="overall" OnCheckedChanged="RadioButton30_CheckedChanged" />
+                        <asp:RadioButtonList ID="rdlOverall" runat="server" RepeatDirection="Horizontal" Width="100%">
+                            <asp:ListItem>1</asp:ListItem>
+                            <asp:ListItem>2</asp:ListItem>
+                            <asp:ListItem>3</asp:ListItem>
+                            <asp:ListItem>4</asp:ListItem>
+                            <asp:ListItem>5</asp:ListItem>
+                        </asp:RadioButtonList>
                     </td>
                 </tr>
             </table>
