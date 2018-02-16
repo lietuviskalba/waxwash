@@ -26,11 +26,7 @@
         .auto-style6 {
             height: 25px;
         }
-        .auto-style7 {
-            width: 655px;
-            height: 182px;
-        }
-    </style>
+        </style>
 </head>
 <body>
             <header>
@@ -45,9 +41,22 @@
     <main></main>
     <form id="form1" runat="server">
     <h3>Give us your feedback!</h3>
-        <h3 style="width: 260px">
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="rdlPrice" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+        <h3 style="width: 495px">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="rdlPrice" Display="Dynamic" ErrorMessage="Ups! You forgot to give us feedback on the price!"></asp:RequiredFieldValidator>
         </h3>
+        <h3 style="width: 495px">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="rdlLength" Display="Dynamic" ErrorMessage="Ups! You forgot to give us feedback on the length of the program!"></asp:RequiredFieldValidator>
+        </h3>
+        <h3 style="width: 495px">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="rdlCustService" Display="Dynamic" ErrorMessage="Ups! You forgot to give us feedback on the Customer Service!"></asp:RequiredFieldValidator>
+        </h3>
+        <h3 style="width: 495px">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="rdlProgramQual" Display="Dynamic" ErrorMessage="Ups! You forgot to give us feedback on the program quality!"></asp:RequiredFieldValidator>
+        </h3>
+        <h3 style="width: 495px">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="rdlOverall" Display="Dynamic" ErrorMessage="Ups! You forgot to give us feedback on the price!"></asp:RequiredFieldValidator>
+        </h3>
+        <p style="width: 495px">&nbsp;</p>
         <div>
             <table class="auto-style1">
                 <tr>
@@ -135,15 +144,44 @@
             <p>
                 <asp:DropDownList ID="ddlUsedProgram" runat="server">
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="ddlUsedProgram" Display="Dynamic" ErrorMessage="Please select the program that you had been using"></asp:RequiredFieldValidator>
             </p>
             <p>Comments:</p>
             <p>
-                <textarea id="txaOther" class="auto-style7" name="S1"></textarea></p>
+                <asp:TextBox id="txtOther" TextMode="multiline" Columns="50" Rows="5" runat="server" /></p>
             <p>
                 <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit Feedback" Width="121px" />
             </p>
             <p>
-                <asp:Button ID="btnClear" runat="server" OnClick="btnClear_Click" Text="Reset" Width="121px" />
+
+    <button type="button" onclick="clear_button()">Clear</button>
+        
+    <script>
+        function clear_button() {
+
+            var radBttns1 = document.getElementsByName("rdlPrice");
+            var radBttns2 = document.getElementsByName("rdlLength");
+            var radBttns3 = document.getElementsByName("rdlCustService");
+            var radBttns4 = document.getElementsByName("rdlWebService");
+            var radBttns5 = document.getElementsByName("rdlOverall");
+            var radBttns6 = document.getElementsByName("rdlProgramQual");
+            for (var x = 0; x < radBttns1.length; x++) {
+
+                radBttns1[x].checked = false;
+                radBttns2[x].checked = false;
+                radBttns3[x].checked = false;
+                radBttns4[x].checked = false;
+                radBttns5[x].checked = false;
+                radBttns6[x].checked = false;
+
+            }
+            document.getElementById("txtOther").value = "";
+            document.getElementById("ddlUsedProgram").selectedIndex = 0; 
+
+        }
+
+
+    </script>
             </p>
             <p>Copyright WaxWash Car Wash</p>
         <p>Mantas Lingaitis 101165443</p>
@@ -152,6 +190,6 @@
     </footer>
 
     </form>
-        
-</body>
+
+    </body>
 </html>
