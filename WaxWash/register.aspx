@@ -38,7 +38,7 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-inverse float-right">
+    <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <ul class="nav navbar-nav " >
                 <li role="presentation"><a href="index.aspx">Home</a></li>
