@@ -14,7 +14,23 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="Styles/styles.css" />    
+
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: 11pt;
+        }
+        .auto-style2 {
+            width: 852px;
+            height: 236px;
+        }
+        .auto-style3 {
+            width: 852px;
+            height: 283px;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -31,17 +47,30 @@
     </nav>
 </header>
     <main>
-        <h1 id="center">Welcome to Wax-Wash Car Wash</h1>
+        <h1>Welcome to Wax-Wash Car Wash</h1>
         <h4>Take a look around and book a wash</h4>
         <img src="Images/car1.png"><br />
+    <br />
+        <h2>What makes Wax-Wash the best choice to wash your car? </h2>
+    <br />
 
+        <p><span class="auto-style1">At Wax-Wash we understand that your car is more than a mode of transportation to you. All vehicles receive an unparallel attention to detail, utilizing the latest products and techniques to protect your automotive investment and bring out the full beauty and lustre of your vehicle.</span></p>
+    <p>&nbsp;</p>
+    <p>Book a car wash right now and don&#39;t worry about losing time at the premises. Schedule the treatment that your car deserves!</p>
+
+        <p>
         <button id="btnBookWash" type="button" onclick="location.href='login.aspx'">Book a Wash</button>
+        &nbsp;OR
         <button id="btnRegister" type="button" onclick="location.href='login.aspx'">Register</button>
 
-        <p>Ever wanted to have a shiny car like the one above? While we cannot give you the car, we can provide the shineniness. Whether for a special event or just to pride with your car, there is no reason why you shouldn&#39;t come by for a wash.</p>
-        <p>Book a car wash right now and not worry about losing time at the premises. Schedule the treatment that your car deserves!</p>
+        </p>
+        <p>&nbsp;</p>
+    <h2>Car wash options</h2>
+    <img alt="Soak in soap" class="auto-style2" longdesc="The add for one of the wash options" src="Images/Soal%20in%20soap.png" /></p>
+    <p>
+        <img alt="Wax n wash" class="auto-style3" longdesc="The add for one of the wash options" src="Images/wax%20n%20wash.png" /></p>
+    <p>More to come....</p>
        
-
     </main>
     </form>
        <footer>

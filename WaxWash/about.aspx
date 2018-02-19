@@ -34,7 +34,8 @@
     </header>
     <main>
         <h3>Mantas</h3>
-        <p>About him</p>
+        <p>
+            <span class="mceItemHidden">An exchange student from Denmark.Helping set up a git repository for a team to work on. Creating some pages as required per requirments. Adding content to pages to make them more lively.</span></p>
         <h3>Matthew</h3>
         <p>about the other him</p>
         <h3>Bogdan</h3>

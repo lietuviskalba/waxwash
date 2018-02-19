@@ -33,7 +33,8 @@
     <main>
      <form id="form1" runat="server">
         <div>
-            <asp:Label ID="lblFeedback" runat="server" Text="Feedback submitted.."></asp:Label>
+            &nbsp;Your
+            <asp:Label ID="lblFeedback" runat="server" Text="Thank you for the completing the survey. Your feedback is submitted..."></asp:Label>
         </div>
     </form>
     </main>
