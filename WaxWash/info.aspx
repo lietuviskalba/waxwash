@@ -7,6 +7,8 @@
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+    <link href="Styles/styles.css" rel="stylesheet" type="text/css" />
+
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -59,9 +61,7 @@
     </main>
     <footer>
         <p>Copyright WaxWash Car Wash</p>
-        <p>Mantas Lingaitis 101165443</p>
-        <p>Bogdan Muntean 101165247</p>
-        <p>Matthew Smalley 100973825</p>
+        <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825</p>
     </footer>
 </body>
 </html>

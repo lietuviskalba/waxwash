@@ -10,6 +10,8 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+    <link href="Styles/styles.css" rel="stylesheet" type="text/css" />
+
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <title></title>
@@ -37,9 +39,7 @@
     </main>
         <footer>
         <p>Copyright WaxWash Car Wash</p>
-        <p>Mantas Lingaitis 101165443</p>
-        <p>Bogdan Muntean 101165247</p>
-        <p>Matthew Smalley 100973825</p>
+        <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825</p>
     </footer>
 
 </body>
