@@ -31,7 +31,7 @@
     </nav>
 </header>
     <main>
-        <h1>Welcome to Wax-Wash Car Wash</h1>
+        <h1 id="center">Welcome to Wax-Wash Car Wash</h1>
         <h4>Take a look around and book a wash</h4>
         <img src="Images/car1.png"><br />
 

@@ -52,7 +52,7 @@
   </div>
 </nav>
     </header>
-    <main></main>
+    <main>
     <form id="form1" runat="server">
     <h3>Give us your feedback!</h3>
         <h3 style="width: 495px">
@@ -199,6 +199,7 @@
 
     </script>
             </p>
+        </main>
         <footer>
             <p>Copyright WaxWash Car Wash</p>
         <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825</p>
