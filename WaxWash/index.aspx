@@ -17,6 +17,14 @@
         .auto-style1 {
             font-size: 11pt;
         }
+        .auto-style2 {
+            width: 852px;
+            height: 236px;
+        }
+        .auto-style3 {
+            width: 852px;
+            height: 283px;
+        }
     </style>
 </head>
 <body>
@@ -38,17 +46,26 @@
         <h4>Bringing back that new car feeling.</h4>
         <img src="Images/car1.png"><br />
     <br />
-    What makes Wax Wash the best choice to wash your car?<br />
+        <h2>What makes Wax-Wash the best choice to wash your car? </h2>
+    <br />
 
-        <p><span class="auto-style1">At Wax Wash we understand that your car is more than a mode of transportation to you. All vehicles receive an unparallel attention to detail, utilizing the latest products and techniques to protect your automotive investment and bring out the full beauty and lustre of your vehicle.</span></p>
+        <p><span class="auto-style1">At Wax-Wash we understand that your car is more than a mode of transportation to you. All vehicles receive an unparallel attention to detail, utilizing the latest products and techniques to protect your automotive investment and bring out the full beauty and lustre of your vehicle.</span></p>
+    <p>&nbsp;</p>
+    <p>Book a car wash right now and don&#39;t worry about losing time at the premises. Schedule the treatment that your car deserves!</p>
 
-        <p><button id="btnBookWash" type="button" onclick="location.href='login.aspx'">Book a Wash</button>
+        <p>
+        <button id="btnBookWash" type="button" onclick="location.href='login.aspx'">Book a Wash</button>
+        &nbsp;OR
         <button id="btnRegister" type="button" onclick="location.href='login.aspx'">Register</button>
 
         </p>
-        <p>Book a car wash right now and not worry about losing time at the premises. Schedule the treatment that your car deserves!</p>
+        <p>&nbsp;</p>
+    <h2>Car wash options</h2>
+    <img alt="Soak in soap" class="auto-style2" longdesc="The add for one of the wash options" src="Images/Soal%20in%20soap.png" /></p>
+    <p>
+        <img alt="Wax n wash" class="auto-style3" longdesc="The add for one of the wash options" src="Images/wax%20n%20wash.png" /></p>
+    <p>More to come....</p>
        
-
     </main>
     </form>
        <footer>

@@ -153,7 +153,7 @@
         </div>
         <footer>
         <p>
-            <asp:Label ID="Label1" runat="server" Text="Which program did you used?"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Which program did you use?"></asp:Label>
             </p>
             <p>
                 <asp:DropDownList ID="ddlUsedProgram" runat="server">
