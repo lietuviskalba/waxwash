@@ -16,18 +16,18 @@
 </head>
 <body>
 <header>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-        <li role="presentation"><a href="index.aspx">Home</a></li>
-        <li role="presentation"><a href="info.aspx">Information Page</a></li>
-        <li role="presentation"><a href="feedback.aspx">Feedback</a></li>
-        <li role="presentation"><a href="about.aspx">About us</a></li>
-        <li role="presentation"><a href="login.aspx">Login/registration</a></li>
-    </ul>
-  </div>
-</nav>
-    </header>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav" >
+                <li role="presentation"><a href="index.aspx">Home</a></li>
+                <li role="presentation"><a href="info.aspx">Information Page</a></li>
+                <li role="presentation"><a href="feedback.aspx">Feedback</a></li>
+                <li role="presentation"><a href="about.aspx">About us</a></li>
+                <li role="presentation"><a href="login.aspx">Login/registration</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
     <main>
         <h1>Welcome to Wax-Wash Car Wash</h1>
         <h4>Take a look around and book a wash</h4>
