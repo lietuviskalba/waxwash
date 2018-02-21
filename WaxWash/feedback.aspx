@@ -39,6 +39,7 @@
         </style>
 </head>
 <body>
+    <div id="wrapper">
 <header>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -199,13 +200,13 @@
 
     </script>
             </p>
+        </form>
         </main>
         <footer>
             <p>Copyright WaxWash Car Wash</p>
         <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825</p>
     </footer>
-
-    </form>
+        </div>
 
     </body>
 </html>

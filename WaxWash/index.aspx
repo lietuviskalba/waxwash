@@ -10,29 +10,17 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <link href="Styles/styles.css" rel="stylesheet" type="text/css" />
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="Styles/styles.css" />    
+<link rel="stylesheet" type="text/css" href="Styles/styles.css" />    
 
     <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            font-size: 11pt;
-        }
-        .auto-style2 {
-            width: 852px;
-            height: 236px;
-        }
-        .auto-style3 {
-            width: 852px;
-            height: 283px;
-        }
-    </style>
+    
 </head>
 <body>
+    <div id="wrapper">
 <header>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -46,7 +34,7 @@
         </div>
     </nav>
 </header>
-    <main>
+   <main>
         <h1>Welcome to Wax-Wash Car Wash</h1>
         <h4>Take a look around and book a wash</h4>
         <img src="Images/car1.png"><br />
@@ -66,13 +54,13 @@
         </p>
         <p>&nbsp;</p>
     <h2>Car wash options</h2>
-    <img alt="Soak in soap" class="auto-style2" longdesc="The add for one of the wash options" src="Images/Soal%20in%20soap.png" /></p>
+    <img alt="Soak in soap" class="auto-style2" longdesc="The add for one of the wash options" src="Images/Soal%20in%20soap.png" /><img alt="Wax n wash" class="auto-style3" longdesc="The add for one of the wash options" src="Images/wax%20n%20wash.png" /></p>
     <p>
-        <img alt="Wax n wash" class="auto-style3" longdesc="The add for one of the wash options" src="Images/wax%20n%20wash.png" /></p>
-    <p>More to come....</p>
-       
+        &nbsp;</p>
+    <p>&nbsp;</p>
+
     </main>
-    </form>
+    </div>
        <footer>
         <p>Copyright WaxWash Car Wash</p>
         <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825</p>
