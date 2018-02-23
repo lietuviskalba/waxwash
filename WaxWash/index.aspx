@@ -35,30 +35,47 @@
     </nav>
 </header>
    <main>
-        <h1>Welcome to Wax-Wash Car Wash</h1>
-        <h4>Take a look around and book a wash</h4>
-        <img src="Images/car1.png"><br />
+        <h1 class="text-center">Welcome to Wax-Wash Car Wash</h1>
     <br />
-        <h2>What makes Wax-Wash the best choice to wash your car? </h2>
-    <br />
+        <h2 class="text-center">What makes Wax-Wash the best choice to wash your car? </h2>
+       <img style="float: right; margin: 0px 15px 15px 0px;" src="Images/car1.png"><br />
 
-        <p><span class="auto-style1">At Wax-Wash we understand that your car is more than a mode of transportation to you. All vehicles receive an unparallel attention to detail, utilizing the latest products and techniques to protect your automotive investment and bring out the full beauty and lustre of your vehicle.</span></p>
+        <p><span class="auto-style1">At Wax-Wash we understand that your car is more than a mode of transportation to you. All vehicles receive an unparallel attention to detail, utilizing the latest products and techniques to protect your automotive investment and bring out the full beauty and lustre of your vehicle.
+            CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT 
+           </span></p>
     <p>&nbsp;</p>
     <p>Book a car wash right now and don&#39;t worry about losing time at the premises. Schedule the treatment that your car deserves!</p>
 
         <p>
-        <button id="btnBookWash" type="button" onclick="location.href='login.aspx'">Book a Wash</button>
-        &nbsp;OR
-        <button id="btnRegister" type="button" onclick="location.href='login.aspx'">Register</button>
+        <button class="button" id="btnBookWash" type="button" onclick="location.href='login.aspx'">Book a Wash</button>
+        <button class="button" id="btnRegister" type="button" onclick="location.href='login.aspx'">Register</button>
 
         </p>
         <p>&nbsp;</p>
-    <h2>Car wash options</h2>
-    <img alt="Soak in soap" class="auto-style2" longdesc="The add for one of the wash options" src="Images/Soal%20in%20soap.png" /><img alt="Wax n wash" class="auto-style3" longdesc="The add for one of the wash options" src="Images/wax%20n%20wash.png" /></p>
-    <p>
-        &nbsp;</p>
-    <p>&nbsp;</p>
-
+       <br />
+       <br />
+    <h1 class="text-center">Car wash options</h1>
+       <div style="min-height:100%; height: 100%;">
+        <div style="float:left; width: 30%; height: 29%; margin-bottom: 3%; margin-right: 1.5%; margin-left: 1.5%;">
+           <img style="height: 100%; width: 100%;" alt="Soak in soap" longdesc="The add for one of the wash options" src="Images/Soal%20in%20soap.png" />
+       </div>
+       <div style="float:left; width: 30%; height: 29%; margin-bottom: 3%; margin-right: 1.5%; margin-left: 1.5%;">
+           <img style="height: 100%; width: 100%;" alt="Wax n wash" class="auto-style3" longdesc="The add for one of the wash options" src="Images/wax%20n%20wash.png" />
+       </div>
+       <div style="float:left; width: 30%; height: 29%; margin-bottom: 3%; margin-right: 1.5%; margin-left: 1.5%;">
+           <img style="height: 100%; width: 100%;" alt="Wax n wash" class="auto-style3" longdesc="The add for one of the wash options" src="Images/wax%20n%20wash.png" />
+       </div>
+       <div style="float:left; width: 30%; height: 29%; margin-bottom: 3%; margin-right: 1.5%; margin-left: 1.5%;">
+           <img style="height: 100%; width: 100%;" alt="Wax n wash" class="auto-style3" longdesc="The add for one of the wash options" src="Images/wax%20n%20wash.png" />
+       </div>
+       <div style="float:left; width: 30%; height: 29%; margin-bottom: 3%; margin-right: 1.5%; margin-left: 1.5%;">
+           <img style="height: 100%; width: 100%;" alt="Wax n wash" class="auto-style3" longdesc="The add for one of the wash options" src="Images/wax%20n%20wash.png" />
+       </div>
+       <div style="float:left; width: 30%; height: 29%; margin-bottom: 3%; margin-right: 1.5%; margin-left: 1.5%;">
+           <img style="height: 100%; width: 100%;" alt="Wax n wash" class="auto-style3" longdesc="The add for one of the wash options" src="Images/wax%20n%20wash.png" />
+        </div>
+        </div>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
     </main>
     </div>
        <footer>
