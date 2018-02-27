@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -13,14 +14,13 @@ public partial class _Default : System.Web.UI.Page
     {
         UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
         if (!IsPostBack) {
-            SqlConnection sqlconn = new SqlConnection();
-            sqlconn.ConnectionString =
-            "Data Source=DESKTOP-LSLT8EQ;" +
-            "Initial Catalog=waxwashftw;" +
-            "Integrated Security=SSPI;";
-            sqlconn.Open();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader reader;
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\waxwash\WaxWash\wax.mdf;Integrated Security=True;Connect Timeout=30");
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "insert into feedback values( '','"+ 2 + "', '" + 2 + "', '" + 2 + "', '" + 2 + "', '" + 2 + "', '" + 2 + "', '" + 2 + "', '" + 2 + "', 'Helllo')";
+            cmd.ExecuteNonQuery();
+            conn.Close();
 
             for (int i = 0; i <= 10; i++) {
                 //Needs to receive the data from the database
