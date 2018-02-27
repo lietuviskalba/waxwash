@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,6 +13,14 @@ public partial class _Default : System.Web.UI.Page
     {
         UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
         if (!IsPostBack) {
+            SqlConnection sqlconn = new SqlConnection();
+            sqlconn.ConnectionString =
+            "Data Source=DESKTOP-LSLT8EQ;" +
+            "Initial Catalog=waxwashftw;" +
+            "Integrated Security=SSPI;";
+            sqlconn.Open();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader;
 
             for (int i = 0; i <= 10; i++) {
                 //Needs to receive the data from the database
