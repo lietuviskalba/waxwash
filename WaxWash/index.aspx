@@ -18,6 +18,20 @@
 
     <title></title>
     
+    <style type="text/css">
+        .auto-style1 {
+            width: 700px;
+        }
+        .auto-style2 {
+            width: 700px;
+            height: 300px;
+        }
+        .auto-style3 {
+            width: 900px;
+            height: 250px;
+        }
+    </style>
+    
 </head>
 <body>
     <div id="wrapper">
@@ -35,14 +49,12 @@
     </nav>
 </header>
    <main>
-        <h1 class="text-center">Welcome to Wax-Wash Car Wash</h1>
-    <br />
+        <img alt="logo" class="auto-style3" src="Images/Better%20images/Logo%20for%20wax%20wash.jpg" /><br />
         <h2 class="text-center">What makes Wax-Wash the best choice to wash your car? </h2>
        <img style="float: right; margin: 0px 15px 15px 0px;" src="Images/car1.png"><br />
 
         <p><span class="auto-style1">At Wax-Wash we understand that your car is more than a mode of transportation to you. All vehicles receive an unparallel attention to detail, utilizing the latest products and techniques to protect your automotive investment and bring out the full beauty and lustre of your vehicle.
-            CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT 
-           </span></p>
+            We love cars and we have restored An Canadian Car Wash to its former glory, combining our European expectations of quality with friendly Canadian service and good old-fashioned hard work with sweat and wax. It long stood as Torontos favorite full-service car wash, proudly serving tens of thousands of locals, snowbirds and visitors each year. So please come on down!</span></p>
     <p>&nbsp;</p>
     <p>Book a car wash right now and don&#39;t worry about losing time at the premises. Schedule the treatment that your car deserves!</p>
 
@@ -55,27 +67,16 @@
        <br />
        <br />
     <h1 class="text-center">Car wash options</h1>
-       <div style="min-height:100%; height: 100%;">
-        <div style="float:left; width: 30%; height: 29%; margin-bottom: 3%; margin-right: 1.5%; margin-left: 1.5%;">
-           <img style="height: 100%; width: 100%;" alt="Soak in soap" longdesc="The add for one of the wash options" src="Images/Soal%20in%20soap.png" />
-       </div>
-       <div style="float:left; width: 30%; height: 29%; margin-bottom: 3%; margin-right: 1.5%; margin-left: 1.5%;">
-           <img style="height: 100%; width: 100%;" alt="Wax n wash" class="auto-style3" longdesc="The add for one of the wash options" src="Images/wax%20n%20wash.png" />
-       </div>
-       <div style="float:left; width: 30%; height: 29%; margin-bottom: 3%; margin-right: 1.5%; margin-left: 1.5%;">
-           <img style="height: 100%; width: 100%;" alt="Wax n wash" class="auto-style3" longdesc="The add for one of the wash options" src="Images/wax%20n%20wash.png" />
-       </div>
-       <div style="float:left; width: 30%; height: 29%; margin-bottom: 3%; margin-right: 1.5%; margin-left: 1.5%;">
-           <img style="height: 100%; width: 100%;" alt="Wax n wash" class="auto-style3" longdesc="The add for one of the wash options" src="Images/wax%20n%20wash.png" />
-       </div>
-       <div style="float:left; width: 30%; height: 29%; margin-bottom: 3%; margin-right: 1.5%; margin-left: 1.5%;">
-           <img style="height: 100%; width: 100%;" alt="Wax n wash" class="auto-style3" longdesc="The add for one of the wash options" src="Images/wax%20n%20wash.png" />
-       </div>
-       <div style="float:left; width: 30%; height: 29%; margin-bottom: 3%; margin-right: 1.5%; margin-left: 1.5%;">
-           <img style="height: 100%; width: 100%;" alt="Wax n wash" class="auto-style3" longdesc="The add for one of the wash options" src="Images/wax%20n%20wash.png" />
-        </div>
-        </div>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+        <p>
+        <img alt="full service" class="auto-style2" src="Images/Better%20images/img_waxwash_Full%20service.jpg" />
+        <img alt="wax" class="auto-style2" src="Images/Better%20images/img_waxwash_Wax%20wash%20program.jpg" />
+        <img alt="self service" class="auto-style2" src="Images/Better%20images/img_waxwash_Self%20service.jpg" />
+        <img alt="in bay" class="auto-style2" src="Images/Better%20images/img_waxwash_In%20bay%20wash.jpg" />
+        <img alt="wax turbo" class="auto-style2" src="Images/Better%20images/img_waxwash_wax%20turbo%20wash.jpg" />
+        <img alt="soap" class="auto-style2" src="Images/Better%20images/img_waxwash_Soak%20in%20soap.jpg" />
+    </p>
+
     </main>
     </div>
        <footer>
