@@ -14,7 +14,7 @@ public partial class _Default : System.Web.UI.Page
     {
         UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
         if (!IsPostBack) {
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\waxwash\WaxWash\wax.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bogdan\Desktop\wax\WaxWash\wax.mdf;Integrated Security=True;Connect Timeout=30");
             conn.Open();
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
