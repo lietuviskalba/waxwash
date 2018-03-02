@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-h1 {
-    
-}
-
 #text-center {
     text-align: center;
 }
@@ -16,6 +12,7 @@ body {
     padding-bottom: 6rem;
     min-height: 100%;
     font-family: "Helvetica Neue", Arial, sans-serif;
+
 }
 
 footer {
@@ -29,18 +26,31 @@ footer {
     font-size: 10px;
 }
 
-h1 {
-    text-align: center;
-    font-family: Arial;
+button {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: gray;
 }
 
 main {
-    margin-left: 2%;
-    margin-right: 2%;
-    background-color: #e1edd4;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    font-size: 16px;
 }
 
-#wrapper {
+h1 {
+        text-align: center;
+        font-family: Arial;
+    }
+
+h1, h2, h3 {
+    color: darkblue;
+    font-weight: bold;
+}
+
+.wrapper {
     height: auto !important;
     height: 100%;
     margin: 0;

@@ -18,7 +18,9 @@
     <title></title>
 </head>
 <body>
-    <div id="wrapper">
+
+    <div class="wrapper">
+
 <header>
 
 <nav class="navbar navbar-inverse">
@@ -44,6 +46,7 @@
     </main>
 
     </div>
+
         <footer>
         <p>Copyright WaxWash Car Wash</p>
         <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825</p>

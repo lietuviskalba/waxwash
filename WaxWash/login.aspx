@@ -28,7 +28,7 @@
     </style>
 </head>
 <body>
-    <div id="wrapper">
+    <div class="wrapper"">
 <header>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
