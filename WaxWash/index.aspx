@@ -34,7 +34,7 @@
     
 </head>
 <body>
-    <div id="wrapper">
+    <div class="wrapper">
 <header>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -51,11 +51,11 @@
    <main>
         <img alt="logo" class="auto-style3" src="Images/Better%20images/Logo%20for%20wax%20wash.jpg" /><br />
         <h2 class="text-center">What makes Wax-Wash the best choice to wash your car? </h2>
-       <img style="float: right; margin: 0px 15px 15px 0px;" src="Images/car1.png"><br />
 
         <p><span class="auto-style1">At Wax-Wash we understand that your car is more than a mode of transportation to you. All vehicles receive an unparallel attention to detail, utilizing the latest products and techniques to protect your automotive investment and bring out the full beauty and lustre of your vehicle.
             We love cars and we have restored An Canadian Car Wash to its former glory, combining our European expectations of quality with friendly Canadian service and good old-fashioned hard work with sweat and wax. It long stood as Torontos favorite full-service car wash, proudly serving tens of thousands of locals, snowbirds and visitors each year. So please come on down!</span></p>
     <p>&nbsp;</p>
+       <img style="margin: 15px 15px 15px 15px;" src="Images/car1.png">
     <p>Book a car wash right now and don&#39;t worry about losing time at the premises. Schedule the treatment that your car deserves!</p>
 
         <p>
