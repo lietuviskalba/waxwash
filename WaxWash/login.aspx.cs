@@ -33,7 +33,9 @@ public partial class login : System.Web.UI.Page
 
         //logic
         conn.Open();
-        SqlCommand cmd1 = new SqlCommand("SELECT username FROM tmpusername WHERE _id=1");
+        SqlCommand cmd1 = conn.CreateCommand();
+        cmd1.CommandType = CommandType.Text;
+        cmd1 = new SqlCommand("SELECT username FROM " + tableName + " WHERE ID=1");
 
         SqlDataReader usernameRdr = null;
 
@@ -41,8 +43,10 @@ public partial class login : System.Web.UI.Page
 
         while (usernameRdr.Read())
         {
-            string username11 = usernameRdr["username11"].ToString();
+           dbUsername = usernameRdr["username"].ToString();
         }
+
+        Console.WriteLine("The value is:" + dbUsername);
         /*
         SqlCommand cmd = conn.CreateCommand();
         cmd.CommandType = CommandType.Text;
