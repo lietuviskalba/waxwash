@@ -36,6 +36,17 @@
             height: 27px;
             width: 244px;
         }
+            .auto-style7 {
+                width: 254px;
+                height: 22px;
+            }
+            .auto-style8 {
+                width: 244px;
+                height: 22px;
+            }
+            .auto-style9 {
+                height: 22px;
+            }
     </style>
 </head>
 <body>
@@ -57,7 +68,25 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style2">Create account here!</td>
+                    <td class="auto-style2">
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" DataKeyNames="ID" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" GridLines="None">
+                            <AlternatingRowStyle BackColor="PaleGoldenrod" />
+                            <Columns>
+                                <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
+                                <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
+                                <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
+                                <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
+                            </Columns>
+                            <FooterStyle BackColor="Tan" />
+                            <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                            <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+                            <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                            <SortedAscendingCellStyle BackColor="#FAFAE7" />
+                            <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+                            <SortedDescendingCellStyle BackColor="#E1DB9C" />
+                            <SortedDescendingHeaderStyle BackColor="#C2A47B" />
+                        </asp:GridView>
+                        Create account here!</td>
                     <td class="auto-style5">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
@@ -80,11 +109,11 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">Password:</td>
-                    <td class="auto-style5">
+                    <td class="auto-style7">Password:</td>
+                    <td class="auto-style8">
                         <asp:TextBox ID="txtRegisterPassword" runat="server" Width="200px"></asp:TextBox>
                     </td>
-                    <td>
+                    <td class="auto-style9">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtRegisterPassword" ErrorMessage="You must enter a password!"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
@@ -94,7 +123,7 @@
                         <asp:TextBox ID="txtRegisterRepeatPassword" runat="server" Width="200px"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtRegisterRepeatPassword" ErrorMessage="You must repeat your password!"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtRegisterRepeatPassword" ErrorMessage="You must repeat your password!" Display="Dynamic"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -108,14 +137,31 @@
                 </tr>
             </table>
         </div>
-    </form>
         <p>Have an account? <a href="login.aspx">Login here!</a></p>
-            <p>&nbsp;</p>
+        <!-- 
     <footer>
-            <p>Copyright WaxWash Car Wash</p>
+        <p>Copyright WaxWash Car Wash</p>
         <p>Mantas Lingaitis 101165443</p>
         <p>Bogdan Muntean 101165247</p>
         <p>Matthew Smalley 100973825</p>
     </footer>
-</body>
+            -->
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MyLocalDatabaseConnectionString1 %>" DeleteCommand="DELETE FROM [UserLogin] WHERE [ID] = @ID" InsertCommand="INSERT INTO [UserLogin] ([username], [password], [email]) VALUES (@username, @password, @email)" ProviderName="<%$ ConnectionStrings:MyLocalDatabaseConnectionString1.ProviderName %>" SelectCommand="SELECT [ID], [username], [password], [email] FROM [UserLogin]" UpdateCommand="UPDATE [UserLogin] SET [username] = @username, [password] = @password, [email] = @email WHERE [ID] = @ID">
+            <DeleteParameters>
+                <asp:Parameter Name="ID" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="username" Type="String" />
+                <asp:Parameter Name="password" Type="String" />
+                <asp:Parameter Name="email" Type="String" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="username" Type="String" />
+                <asp:Parameter Name="password" Type="String" />
+                <asp:Parameter Name="email" Type="String" />
+                <asp:Parameter Name="ID" Type="Int32" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
+    </form>
+        </body>
 </html>

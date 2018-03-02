@@ -4,9 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 public partial class register : System.Web.UI.Page
 {
+    //server side database conncetion input
+    string tableName = "UserLogin";
+    static string change_PATH = @"Data Source=.\sqlexpress;Initial Catalog=MyLocalDatabase;Integrated Security=True";
+
+    SqlConnection conn = new SqlConnection(change_PATH);
+
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -27,7 +35,13 @@ public partial class register : System.Web.UI.Page
             //logic
             if (password.Equals(repeatPassword))
             {
-                //Add logic to save data to database
+                //save data to database
+                conn.Open();
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "insert into " + tableName + " values('" + username + "', '" + password + "', '" + email + "')";
+                cmd.ExecuteNonQuery();
+                conn.Close();
                 //output #1
                 lblStatus.Text = "You have Registered!!! Mr." + username;
                 Server.Transfer("login.aspx", true);
