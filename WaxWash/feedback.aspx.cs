@@ -16,16 +16,13 @@ public partial class _Default : System.Web.UI.Page
         if (!IsPostBack) {
             SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bogdan\Desktop\wax\WaxWash\wax.mdf;Integrated Security=True;Connect Timeout=30");
             conn.Open();
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into feedback values( '','"+ 2 + "', '" + 2 + "', '" + 2 + "', '" + 2 + "', '" + 2 + "', '" + 2 + "', '" + 2 + "', '" + 2 + "', 'Helllo')";
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            SqlCommand cmd = new SqlCommand("SELECT id, name FROM programs;", conn);
+            SqlDataReader dr = cmd.ExecuteReader();
 
-            for (int i = 0; i <= 10; i++) {
-                //Needs to receive the data from the database
-                ddlUsedProgram.Items.Add(i.ToString());
 
+            while (dr.Read()) {
+
+                ddlUsedProgram.Items.Add(dr[0].ToString() + dr[1].ToString());
             }
 
         }
@@ -34,6 +31,10 @@ public partial class _Default : System.Web.UI.Page
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
+        int customer_id = 0;
+        int program_id = 0;
+        
+
         int price = Convert.ToInt32(rdlPrice.SelectedValue);
         int length = Convert.ToInt32(rdlLength.SelectedValue);
         int overall = Convert.ToInt32(rdlOverall.SelectedValue);
@@ -42,6 +43,18 @@ public partial class _Default : System.Web.UI.Page
         int prgQuality = Convert.ToInt32(rdlProgramQual.SelectedValue);
         int selectedProgram = Convert.ToInt32(ddlUsedProgram.SelectedValue);
         string other = txtOther.Text;
+
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bogdan\Desktop\wax\WaxWash\wax.mdf;Integrated Security=True;Connect Timeout=30");
+        conn.Open();
+        SqlCommand cmd = conn.CreateCommand();
+        cmd.CommandType = CommandType.Text;
+        cmd.CommandText = "insert into feedback values( '','" + customer_id +
+            "', '" + program_id + "', '" + price + "', '" + length + "', '" + custService +
+            "', '" + webService + "', '" + prgQuality + "', '" + overall + "', '" + other + "')";
+        cmd.ExecuteNonQuery();
+        
+        conn.Close();
+        
         //Mockup label. Here we will have to redirect the information to the database.
         lblOutput.Text = price + length + overall + custService + webService + prgQuality + selectedProgram + other;
 
