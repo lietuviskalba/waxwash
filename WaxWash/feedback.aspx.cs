@@ -14,7 +14,7 @@ public partial class _Default : System.Web.UI.Page
     {
         UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
         if (!IsPostBack) {
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Bogdan\Desktop\wax\WaxWash\waxwash.mdf; Integrated Security = True; Connect Timeout = 30");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bogdan\Desktop\wax\WaxWash\App_Data\waxwash2.0.mdf;Integrated Security=True;Connect Timeout=30");
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT id, name FROM programs;", conn);
             SqlDataReader dr = cmd.ExecuteReader();
@@ -43,7 +43,7 @@ public partial class _Default : System.Web.UI.Page
       
         string other = txtOther.Text;
 
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Bogdan\Desktop\wax\WaxWash\waxwash.mdf; Integrated Security = True; Connect Timeout = 30");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bogdan\Desktop\wax\WaxWash\App_Data\waxwash2.0.mdf;Integrated Security=True;Connect Timeout=30");
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();
         cmd.CommandType = CommandType.Text;
