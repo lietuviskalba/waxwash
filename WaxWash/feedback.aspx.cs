@@ -9,12 +9,14 @@ using System.Data;
 
 public partial class _Default : System.Web.UI.Page
 {
-    
+    static string change_PATH = ChangePathHere.path_CHANGE;
+    SqlConnection conn = new SqlConnection(change_PATH);
+
     protected void Page_Load(object sender, EventArgs e)
     {
         UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
         if (!IsPostBack) {
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bogdan\Desktop\wax\WaxWash\App_Data\waxwash2.0.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection conn = new SqlConnection(change_PATH);
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT id, name FROM programs;", conn);
             SqlDataReader dr = cmd.ExecuteReader();

@@ -12,11 +12,10 @@ public partial class login : System.Web.UI.Page
 {
 
     //server side database conncetion input
-    string tableName = "MyPeopleTest";
-    static string change_PATH = @"Data Source=.\sqlexpress;Initial Catalog=MyLocalDatabase;Integrated Security=True";
-    //"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bogdan\Desktop\wax\WaxWash\wax.mdf;Integrated Security=True;Connect Timeout=30"
-
+    static string change_PATH = ChangePathHere.path_CHANGE;
     SqlConnection conn = new SqlConnection(change_PATH);
+
+    string tableName = "users";
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -28,37 +27,37 @@ public partial class login : System.Web.UI.Page
         //received input
         string username = txtLoginUsername.Text;
         string password = txtLoginPassword.Text;
-        string dbUsername = "";
-        string dbPassword = "";
 
         //logic
         conn.Open();
-        SqlCommand cmd1 = conn.CreateCommand();
-        cmd1.CommandType = CommandType.Text;
-        cmd1 = new SqlCommand("SELECT username FROM " + tableName + " WHERE ID=1");
-
-        SqlDataReader usernameRdr = null;
-
-        usernameRdr = cmd1.ExecuteReader();
-
-        while (usernameRdr.Read())
-        {
-           dbUsername = usernameRdr["username"].ToString();
-        }
-
-        Console.WriteLine("The value is:" + dbUsername);
-        /*
-        SqlCommand cmd = conn.CreateCommand();
-        cmd.CommandType = CommandType.Text;
-        cmd.CommandText = "insert into " + tableName +" values('" + username + "')";
-        cmd.ExecuteNonQuery();
-        */
+        string checkUser = "SELECT count(*) FROM " + tableName + " WHERE username='" + username + "'";
+        SqlCommand cmd = new SqlCommand(checkUser, conn);
+        int temp = Convert.ToInt32(cmd.ExecuteScalar().ToString());
         conn.Close();
-
-        //Check to see that the password and username matches from the database
-        Server.Transfer("confirmationLogin.aspx", true);
-
+        //Check to see that the username matches from the database
+        if (temp == 1)
+        {
+            conn.Open();
+            string checkPassQuery = "SELECT password FROM " + tableName + " WHERE username='" + username + "'";
+            SqlCommand passCMD = new SqlCommand(checkPassQuery, conn);
+            string passwordCheck = passCMD.ExecuteScalar().ToString().Replace(" ","");
+            conn.Close();
+            //Check to see that the password matches from the database
+            if (passwordCheck.Equals(password))
+            {
+                Response.Write("Password is good");
+                Server.Transfer("confirmationLogin.aspx", true);
+            }
+            else
+            {
+                Response.Write("Password NOT NOT NOT good");
+            }
+            
+        }
+        else
+        {
+            Response.Write("Username is wrong");
+        }
+        
     }
-
-
 }

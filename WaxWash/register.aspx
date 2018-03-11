@@ -80,24 +80,70 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2">
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" DataKeyNames="ID" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="Black" GridLines="None">
-                            <AlternatingRowStyle BackColor="PaleGoldenrod" />
+                        Create account here!<asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:waxwashConnectionString1 %>" DeleteCommand="DELETE FROM [users] WHERE [id] = @id" InsertCommand="INSERT INTO [users] ([f_name], [l_name], [address], [email], [password]) VALUES (@f_name, @l_name, @address, @email, @password)" ProviderName="<%$ ConnectionStrings:waxwashConnectionString1.ProviderName %>" SelectCommand="SELECT [id], [f_name], [l_name], [address], [email], [password] FROM [users]" UpdateCommand="UPDATE [users] SET [f_name] = @f_name, [l_name] = @l_name, [address] = @address, [email] = @email, [password] = @password WHERE [id] = @id">
+                            <DeleteParameters>
+                                <asp:Parameter Name="id" Type="Int32" />
+                            </DeleteParameters>
+                            <InsertParameters>
+                                <asp:Parameter Name="f_name" Type="String" />
+                                <asp:Parameter Name="l_name" Type="String" />
+                                <asp:Parameter Name="address" Type="String" />
+                                <asp:Parameter Name="email" Type="String" />
+                                <asp:Parameter Name="password" Type="String" />
+                            </InsertParameters>
+                            <UpdateParameters>
+                                <asp:Parameter Name="f_name" Type="String" />
+                                <asp:Parameter Name="l_name" Type="String" />
+                                <asp:Parameter Name="address" Type="String" />
+                                <asp:Parameter Name="email" Type="String" />
+                                <asp:Parameter Name="password" Type="String" />
+                                <asp:Parameter Name="id" Type="Int32" />
+                            </UpdateParameters>
+                        </asp:SqlDataSource>
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="id" DataSourceID="SqlDataSource3" EmptyDataText="There are no data records to display." GridLines="Horizontal">
+                            <AlternatingRowStyle BackColor="#F7F7F7" />
                             <Columns>
-                                <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
+                                <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id" />
+                                <asp:BoundField DataField="f_name" HeaderText="f_name" SortExpression="f_name" />
+                                <asp:BoundField DataField="l_name" HeaderText="l_name" SortExpression="l_name" />
+                                <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" />
+                                <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
                                 <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
                                 <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
-                                <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
                             </Columns>
-                            <FooterStyle BackColor="Tan" />
-                            <HeaderStyle BackColor="Tan" Font-Bold="True" />
-                            <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
-                            <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
-                            <SortedAscendingCellStyle BackColor="#FAFAE7" />
-                            <SortedAscendingHeaderStyle BackColor="#DAC09E" />
-                            <SortedDescendingCellStyle BackColor="#E1DB9C" />
-                            <SortedDescendingHeaderStyle BackColor="#C2A47B" />
+                            <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+                            <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
+                            <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+                            <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
+                            <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
+                            <SortedAscendingCellStyle BackColor="#F4F4FD" />
+                            <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
+                            <SortedDescendingCellStyle BackColor="#D8D8F0" />
+                            <SortedDescendingHeaderStyle BackColor="#3E3277" />
                         </asp:GridView>
-                        Create account here!</td>
+                        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:C:\USERS\MANTA\DESKTOP\WAXWASH\WAXWASH\APP_DATA\WAXWASH2.0.MDFConnectionString1 %>" DeleteCommand="DELETE FROM [users] WHERE [id] = @id" InsertCommand="INSERT INTO [users] ([f_name], [l_name], [address], [email], [username], [password]) VALUES (@f_name, @l_name, @address, @email, @username, @password)" ProviderName="<%$ ConnectionStrings:C:\USERS\MANTA\DESKTOP\WAXWASH\WAXWASH\APP_DATA\WAXWASH2.0.MDFConnectionString1.ProviderName %>" SelectCommand="SELECT [id], [f_name], [l_name], [address], [email], [username], [password] FROM [users]" UpdateCommand="UPDATE [users] SET [f_name] = @f_name, [l_name] = @l_name, [address] = @address, [email] = @email, [username] = @username, [password] = @password WHERE [id] = @id">
+                            <DeleteParameters>
+                                <asp:Parameter Name="id" Type="Int32" />
+                            </DeleteParameters>
+                            <InsertParameters>
+                                <asp:Parameter Name="f_name" Type="String" />
+                                <asp:Parameter Name="l_name" Type="String" />
+                                <asp:Parameter Name="address" Type="String" />
+                                <asp:Parameter Name="email" Type="String" />
+                                <asp:Parameter Name="username" Type="String" />
+                                <asp:Parameter Name="password" Type="String" />
+                            </InsertParameters>
+                            <UpdateParameters>
+                                <asp:Parameter Name="f_name" Type="String" />
+                                <asp:Parameter Name="l_name" Type="String" />
+                                <asp:Parameter Name="address" Type="String" />
+                                <asp:Parameter Name="email" Type="String" />
+                                <asp:Parameter Name="username" Type="String" />
+                                <asp:Parameter Name="password" Type="String" />
+                                <asp:Parameter Name="id" Type="Int32" />
+                            </UpdateParameters>
+                        </asp:SqlDataSource>
+                    </td>
                     <td class="auto-style5">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
@@ -109,6 +155,30 @@
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtRegisterEmail" ErrorMessage="You must enter an email address!"></asp:RequiredFieldValidator>
                     </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">Firstname:</td>
+                    <td class="auto-style5">
+                        <asp:TextBox ID="txtFname" runat="server" Width="200px"></asp:TextBox>
+                    </td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">Lastname:</td>
+                    <td class="auto-style5">
+                        <asp:TextBox ID="txtLname" runat="server" Width="200px"></asp:TextBox>
+                    </td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">Address:</td>
+                    <td class="auto-style5">
+                        <asp:TextBox ID="txtAddress" runat="server" Width="200px"></asp:TextBox>
+                    </td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">Username:</td>

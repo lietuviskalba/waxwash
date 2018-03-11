@@ -84,6 +84,51 @@
         </h3>
         <h3 style="width: 495px">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="rdlWebService" Display="Dynamic" ErrorMessage="Ups! You forgot to give us feedback on the Web Services"></asp:RequiredFieldValidator>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource2" EmptyDataText="There are no data records to display.">
+                <Columns>
+                    <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id" />
+                    <asp:BoundField DataField="user_id_fk" HeaderText="user_id_fk" SortExpression="user_id_fk" />
+                    <asp:BoundField DataField="program_id_fk" HeaderText="program_id_fk" SortExpression="program_id_fk" />
+                    <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" />
+                    <asp:BoundField DataField="length" HeaderText="length" SortExpression="length" />
+                    <asp:BoundField DataField="cust_service" HeaderText="cust_service" SortExpression="cust_service" />
+                    <asp:BoundField DataField="web_service" HeaderText="web_service" SortExpression="web_service" />
+                    <asp:BoundField DataField="program_qual" HeaderText="program_qual" SortExpression="program_qual" />
+                    <asp:BoundField DataField="overall" HeaderText="overall" SortExpression="overall" />
+                    <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
+                    <asp:BoundField DataField="other" HeaderText="other" SortExpression="other" />
+                </Columns>
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:C:\USERS\MANTA\DESKTOP\WAXWASH\WAXWASH\APP_DATA\WAXWASH2.0.MDFConnectionString1 %>" DeleteCommand="DELETE FROM [feedback] WHERE [id] = @id" InsertCommand="INSERT INTO [feedback] ([user_id_fk], [program_id_fk], [price], [length], [cust_service], [web_service], [program_qual], [overall], [title], [other]) VALUES (@user_id_fk, @program_id_fk, @price, @length, @cust_service, @web_service, @program_qual, @overall, @title, @other)" ProviderName="<%$ ConnectionStrings:C:\USERS\MANTA\DESKTOP\WAXWASH\WAXWASH\APP_DATA\WAXWASH2.0.MDFConnectionString1.ProviderName %>" SelectCommand="SELECT [id], [user_id_fk], [program_id_fk], [price], [length], [cust_service], [web_service], [program_qual], [overall], [title], [other] FROM [feedback]" UpdateCommand="UPDATE [feedback] SET [user_id_fk] = @user_id_fk, [program_id_fk] = @program_id_fk, [price] = @price, [length] = @length, [cust_service] = @cust_service, [web_service] = @web_service, [program_qual] = @program_qual, [overall] = @overall, [title] = @title, [other] = @other WHERE [id] = @id">
+                <DeleteParameters>
+                    <asp:Parameter Name="id" Type="Int32" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="user_id_fk" Type="Int32" />
+                    <asp:Parameter Name="program_id_fk" Type="Int32" />
+                    <asp:Parameter Name="price" Type="Int32" />
+                    <asp:Parameter Name="length" Type="Int32" />
+                    <asp:Parameter Name="cust_service" Type="Int32" />
+                    <asp:Parameter Name="web_service" Type="Int32" />
+                    <asp:Parameter Name="program_qual" Type="Int32" />
+                    <asp:Parameter Name="overall" Type="Int32" />
+                    <asp:Parameter Name="title" Type="String" />
+                    <asp:Parameter Name="other" Type="String" />
+                </InsertParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="user_id_fk" Type="Int32" />
+                    <asp:Parameter Name="program_id_fk" Type="Int32" />
+                    <asp:Parameter Name="price" Type="Int32" />
+                    <asp:Parameter Name="length" Type="Int32" />
+                    <asp:Parameter Name="cust_service" Type="Int32" />
+                    <asp:Parameter Name="web_service" Type="Int32" />
+                    <asp:Parameter Name="program_qual" Type="Int32" />
+                    <asp:Parameter Name="overall" Type="Int32" />
+                    <asp:Parameter Name="title" Type="String" />
+                    <asp:Parameter Name="other" Type="String" />
+                    <asp:Parameter Name="id" Type="Int32" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
         </h3>
         <div>
             <table class="auto-style1">
