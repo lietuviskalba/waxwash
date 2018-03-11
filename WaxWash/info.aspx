@@ -19,6 +19,7 @@
 <body>
     <div class="wrapper">
 <header>
+    <%--
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <ul class="nav navbar-nav" >
@@ -30,6 +31,16 @@
             </ul>
         </div>
     </nav>
+         --%>
+    <div class="nav">
+      <ul>
+        <li class="home"><a href="index.aspx">Home</a></li>
+        <li class="information"><a class="active" href="info.aspx">Information</a></li>
+        <li class="feedback"><a href="feedback.aspx">Feedback</a></li>
+        <li class="about"><a href="about.aspx">About Us</a></li>
+        <li class="login"><a href="login.aspx">Login/register</a></li>
+      </ul>
+    </div>
 </header>
     <main>
         <h2>Introduction</h2>
