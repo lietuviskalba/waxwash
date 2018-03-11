@@ -10,10 +10,8 @@ using System.Data.SqlClient;
 public partial class register : System.Web.UI.Page
 {
     //server side database conncetion input
-    string tableName = "UserLogin";
-    static string change_PATH = @"Data Source=.\sqlexpress;Initial Catalog=MyLocalDatabase;Integrated Security=True";
-
-    SqlConnection conn = new SqlConnection(change_PATH);
+    string tableName = "users";
+    SqlConnection conn = new SqlConnection(ChangePathHere.path_CHANGE);
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -26,6 +24,9 @@ public partial class register : System.Web.UI.Page
         {
             //input
             string email = txtRegisterEmail.Text;
+            string firstName = txtFname.Text;
+            string lastName = txtLname.Text;
+            string address = txtAddress.Text;
             string username = txtRegisterUsername.Text;
             string password = txtRegisterPassword.Text;
             string repeatPassword = txtRegisterRepeatPassword.Text;
@@ -39,7 +40,7 @@ public partial class register : System.Web.UI.Page
                 conn.Open();
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "insert into " + tableName + " values('" + username + "', '" + password + "', '" + email + "')";
+                cmd.CommandText = "INSERT INTO " + tableName + " VALUES('" + firstName + "', '" + lastName + "', '" + address + "', '" + email + "', '" + username + "', '" + password + "')";
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 //output #1
