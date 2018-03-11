@@ -23,17 +23,28 @@
 
 <header>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav" >
-        <li role="presentation"><a href="index.aspx">Home</a></li>
-        <li role="presentation"><a href="info.aspx">Information Page</a></li>
-        <li role="presentation"><a href="feedback.aspx">Feedback</a></li>
-        <li role="presentation"><a href="about.aspx">About us</a></li>
-        <li role="presentation"><a href="login.aspx">Login/registration</a></li>
-    </ul>
-  </div>
-</nav>
+    <%--
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav" >
+                <li role="presentation"><a href="index.aspx">Home</a></li>
+                <li role="presentation"><a href="info.aspx">Information Page</a></li>
+                <li role="presentation"><a href="feedback.aspx">Feedback</a></li>
+                <li role="presentation"><a href="about.aspx">About us</a></li>
+                <li role="presentation"><a href="login.aspx">Login/registration</a></li>
+            </ul>
+        </div>
+    </nav>
+         --%>
+    <div class="nav">
+      <ul>
+        <li class="home"><a href="index.aspx">Home</a></li>
+        <li class="information"><a href="info.aspx">Information</a></li>
+        <li class="feedback"><a href="feedback.aspx">Feedback</a></li>
+        <li class="about"><a class="active" href="about.aspx">About Us</a></li>
+        <li class="login"><a href="login.aspx">Login/register</a></li>
+      </ul>
+    </div>
     </header>
     <main>
         <h3>Mantas</h3>

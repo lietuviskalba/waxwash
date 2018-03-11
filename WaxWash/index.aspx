@@ -36,6 +36,7 @@
 <body>
     <div class="wrapper">
 <header>
+    <%--
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <ul class="nav navbar-nav" >
@@ -47,8 +48,19 @@
             </ul>
         </div>
     </nav>
+         --%>
+    <div class="nav">
+      <ul>
+        <li class="home"><a class="active" href="index.aspx">Home</a></li>
+        <li class="information"><a href="info.aspx">Information</a></li>
+        <li class="feedback"><a href="feedback.aspx">Feedback</a></li>
+        <li class="about"><a href="about.aspx">About Us</a></li>
+        <li class="login"><a href="login.aspx">Login/register</a></li>
+      </ul>
+    </div>
 </header>
-   <main>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+        <main>
         <img alt="logo" class="auto-style3" src="Images/Better%20images/Logo%20for%20wax%20wash.jpg" /><br />
         <h2 class="text-center">What makes Wax-Wash the best choice to wash your car? </h2>
 
@@ -68,14 +80,13 @@
        <br />
     <h1 class="text-center">Car wash options</h1>
 
-        <p>
-        <img alt="full service" class="auto-style2" src="Images/Better%20images/img_waxwash_Full%20service.jpg" />
-        <img alt="wax" class="auto-style2" src="Images/Better%20images/img_waxwash_Wax%20wash%20program.jpg" />
-        <img alt="self service" class="auto-style2" src="Images/Better%20images/img_waxwash_Self%20service.jpg" />
-        <img alt="in bay" class="auto-style2" src="Images/Better%20images/img_waxwash_In%20bay%20wash.jpg" />
-        <img alt="wax turbo" class="auto-style2" src="Images/Better%20images/img_waxwash_wax%20turbo%20wash.jpg" />
-        <img alt="soap" class="auto-style2" src="Images/Better%20images/img_waxwash_Soak%20in%20soap.jpg" />
-    </p>
+        <img alt="full service" style="height:40%; width:45%; float:left; margin-left:2.5%; margin-right:2.5%; margin-bottom: 5%;" src="Images/Better%20images/img_waxwash_Full%20service.jpg" />
+        <img alt="wax" style="height:40%; width:45%; float:right; margin-left:2.5%; margin-right:2.5%; margin-bottom: 5%;" src="Images/Better%20images/img_waxwash_Wax%20wash%20program.jpg" />
+        <img alt="self service" style="height:40%; width:45%; float:left; margin-left:2.5%; margin-right:2.5%; margin-bottom: 5%;" src="Images/Better%20images/img_waxwash_Self%20service.jpg" />
+        <img alt="in bay" style="height:40%; width:45%; float:right; margin-left:2.5%; margin-right:2.5%; margin-bottom: 5%;" src="Images/Better%20images/img_waxwash_In%20bay%20wash.jpg" />
+        <img alt="wax turbo" style="height:40%; width:45%; float:left; margin-left:2.5%; margin-right:2.5%; margin-bottom: 5%;" src="Images/Better%20images/img_waxwash_wax%20turbo%20wash.jpg" />
+        <img alt="soap" style="height:40%; width:45%; float:right; margin-left:2.5%; margin-right:2.5%; margin-bottom: 5%;" src="Images/Better%20images/img_waxwash_Soak%20in%20soap.jpg" />
+
 
     </main>
     </div>
