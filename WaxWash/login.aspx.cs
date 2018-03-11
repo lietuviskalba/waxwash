@@ -33,7 +33,7 @@ public partial class login : System.Web.UI.Page
         string checkUser = "SELECT count(*) FROM " + tableName + " WHERE username='" + username + "'";
         SqlCommand cmd = new SqlCommand(checkUser, conn);
         int temp = Convert.ToInt32(cmd.ExecuteScalar().ToString());
-        conn.Close();
+       
         //Check to see that the username matches from the database
         if (temp == 1)
         {

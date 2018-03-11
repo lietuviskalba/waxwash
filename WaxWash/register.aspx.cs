@@ -54,4 +54,23 @@ public partial class register : System.Web.UI.Page
             }
         }
     }
+
+    protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
+    {
+        //Check if there are duplicate usernames
+        conn.Open();
+        string checkUser = "SELECT count(*) FROM " + tableName + " WHERE username='" + txtRegisterUsername.Text + "'";
+        SqlCommand cmd = new SqlCommand(checkUser, conn);
+        int temp = Convert.ToInt32(cmd.ExecuteScalar().ToString());
+        conn.Close();
+        if (temp == 1)
+        {
+            args.IsValid = false;
+        }
+        else
+        {
+            args.IsValid = true;
+
+        }
+    }
 }

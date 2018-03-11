@@ -176,6 +176,7 @@
                     </td>
                     <td class="auto-style4">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtRegisterUsername" ErrorMessage="You must enter a username!"></asp:RequiredFieldValidator>
+                        <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="This username is taken!" OnServerValidate="CustomValidator1_ServerValidate"></asp:CustomValidator>
                     </td>
                 </tr>
                 <tr>
