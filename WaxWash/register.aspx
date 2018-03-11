@@ -193,7 +193,7 @@
                 <tr>
                     <td class="auto-style7">Password:</td>
                     <td class="auto-style8">
-                        <asp:TextBox ID="txtRegisterPassword" runat="server" Width="200px"></asp:TextBox>
+                        <asp:TextBox ID="txtRegisterPassword" TextMode="Password" runat="server" Width="200px"></asp:TextBox>
                     </td>
                     <td class="auto-style9">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtRegisterPassword" ErrorMessage="You must enter a password!"></asp:RequiredFieldValidator>
@@ -202,7 +202,7 @@
                 <tr>
                     <td class="auto-style2">Repeat password:</td>
                     <td class="auto-style5">
-                        <asp:TextBox ID="txtRegisterRepeatPassword" runat="server" Width="200px"></asp:TextBox>
+                        <asp:TextBox ID="txtRegisterRepeatPassword" TextMode="Password" runat="server" Width="200px"></asp:TextBox>
                     </td>
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtRegisterRepeatPassword" ErrorMessage="You must repeat your password!" Display="Dynamic"></asp:RequiredFieldValidator>

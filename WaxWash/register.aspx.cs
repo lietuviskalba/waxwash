@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Security;
 
 public partial class register : System.Web.UI.Page
 {
@@ -15,7 +16,7 @@ public partial class register : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        //txtRegisterPassword.PasswordChar = 'O';
     }
 
     protected void btnRegister_Click(object sender, EventArgs e)

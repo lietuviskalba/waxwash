@@ -97,7 +97,7 @@
                 <tr>
                     <td class="auto-style2">Password</td>
                     <td class="auto-style5">
-                        <asp:TextBox ID="txtLoginPassword" runat="server" Width="200px"></asp:TextBox>
+                        <asp:TextBox ID="txtLoginPassword" TextMode="Password" runat="server" Width="200px"></asp:TextBox>
                     </td>
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLoginPassword" ErrorMessage="You need to write your password!"></asp:RequiredFieldValidator>
