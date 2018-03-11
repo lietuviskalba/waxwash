@@ -41,8 +41,30 @@
                 <li role="presentation"><a href="login.aspx">Login/registration</a></li>
             </ul>
         </div>
-    </nav>
-         --%>
+    </nav>--%>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:waxwash2.0ConnectionString1 %>" DeleteCommand="DELETE FROM [users] WHERE [id] = @id" InsertCommand="INSERT INTO [users] ([f_name], [l_name], [address], [email], [username], [password]) VALUES (@f_name, @l_name, @address, @email, @username, @password)" ProviderName="<%$ ConnectionStrings:waxwash2.0ConnectionString1.ProviderName %>" SelectCommand="SELECT [id], [f_name], [l_name], [address], [email], [username], [password] FROM [users]" UpdateCommand="UPDATE [users] SET [f_name] = @f_name, [l_name] = @l_name, [address] = @address, [email] = @email, [username] = @username, [password] = @password WHERE [id] = @id">
+        <DeleteParameters>
+            <asp:Parameter Name="id" Type="Int32" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:Parameter Name="f_name" Type="String" />
+            <asp:Parameter Name="l_name" Type="String" />
+            <asp:Parameter Name="address" Type="String" />
+            <asp:Parameter Name="email" Type="String" />
+            <asp:Parameter Name="username" Type="String" />
+            <asp:Parameter Name="password" Type="String" />
+        </InsertParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="f_name" Type="String" />
+            <asp:Parameter Name="l_name" Type="String" />
+            <asp:Parameter Name="address" Type="String" />
+            <asp:Parameter Name="email" Type="String" />
+            <asp:Parameter Name="username" Type="String" />
+            <asp:Parameter Name="password" Type="String" />
+            <asp:Parameter Name="id" Type="Int32" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
+
     <div class="nav">
       <ul>
         <li class="home"><a href="index.aspx">Home</a></li>
@@ -84,31 +106,32 @@
                 <tr>
                     <td class="auto-style2">
                         <asp:Button ID="btnLogin" runat="server" Text="Login" Width="156px" OnClick="btnLogin_Click" />
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="id" DataSourceID="SqlDataSource2" EmptyDataText="There are no data records to display." ForeColor="Black" GridLines="Horizontal">
+                            <Columns>
+                                <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id" />
+                                <asp:BoundField DataField="f_name" HeaderText="f_name" SortExpression="f_name" />
+                                <asp:BoundField DataField="l_name" HeaderText="l_name" SortExpression="l_name" />
+                                <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" />
+                                <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
+                                <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
+                                <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
+                            </Columns>
+                            <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                            <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                            <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                            <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                            <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                            <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                            <SortedDescendingHeaderStyle BackColor="#242121" />
+                        </asp:GridView>
                     </td>
                     <td class="auto-style5">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
             </table>
         </div>
-            <p>Don&#39;t have an account? <a href="register.aspx">Register here !<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." ForeColor="#333333" GridLines="None">
-                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                <Columns>
-                    <asp:BoundField DataField="testID" HeaderText="testID" ReadOnly="True" SortExpression="testID" />
-                    <asp:BoundField DataField="testName" HeaderText="testName" SortExpression="testName" />
-                </Columns>
-                <EditRowStyle BackColor="#999999" />
-                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-                </asp:GridView>
-                </a>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MyLocalDatabaseConnectionString1 %>" ProviderName="<%$ ConnectionStrings:MyLocalDatabaseConnectionString1.ProviderName %>" SelectCommand="SELECT [testID], [testName] FROM [MyPeopleTEST]"></asp:SqlDataSource>
+            <p>Don&#39;t have an account? <a href="register.aspx">Register here !</a><asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MyLocalDatabaseConnectionString1 %>" ProviderName="<%$ ConnectionStrings:MyLocalDatabaseConnectionString1.ProviderName %>" SelectCommand="SELECT [testID], [testName] FROM [MyPeopleTEST]"></asp:SqlDataSource>
         </p>
     </form>
         </main>
