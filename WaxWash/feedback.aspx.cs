@@ -45,7 +45,7 @@ public partial class _Default : System.Web.UI.Page
       
         string other = txtOther.Text;
 
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bogdan\Desktop\wax\WaxWash\App_Data\waxwash2.0.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection(change_PATH);
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();
         cmd.CommandType = CommandType.Text;
