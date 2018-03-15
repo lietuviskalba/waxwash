@@ -74,7 +74,7 @@
       </ul>
     </div>
 </header>
-    <main></main>
+    <main>
     <form id="form1" runat="server">
         <div>
             <table class="auto-style1">
@@ -234,14 +234,11 @@
             </table>
         </div>
         <p>Have an account? <a href="login.aspx">Login here!</a></p>
-        <!-- 
+        </main>
     <footer>
         <p>Copyright WaxWash Car Wash</p>
-        <p>Mantas Lingaitis 101165443</p>
-        <p>Bogdan Muntean 101165247</p>
-        <p>Matthew Smalley 100973825</p>
+        <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825</p>
     </footer>
-            -->
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MyLocalDatabaseConnectionString1 %>" DeleteCommand="DELETE FROM [UserLogin] WHERE [ID] = @ID" InsertCommand="INSERT INTO [UserLogin] ([username], [password], [email]) VALUES (@username, @password, @email)" ProviderName="<%$ ConnectionStrings:MyLocalDatabaseConnectionString1.ProviderName %>" SelectCommand="SELECT [ID], [username], [password], [email] FROM [UserLogin]" UpdateCommand="UPDATE [UserLogin] SET [username] = @username, [password] = @password, [email] = @email WHERE [ID] = @ID">
             <DeleteParameters>
                 <asp:Parameter Name="ID" Type="Int32" />
