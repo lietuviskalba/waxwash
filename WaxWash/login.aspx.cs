@@ -46,18 +46,17 @@ public partial class login : System.Web.UI.Page
             //Check to see that the password matches from the database
             if (passwordCheck.Equals(password))
             {
-                Response.Write("Password is good");
                 Server.Transfer("confirmationLogin.aspx", true);
             }
             else
             {
-                Response.Write("Password NOT NOT NOT good");
+                lblWarning.Text = "Password is wrong";
             }           
         }
         else
         {
-            Response.Write("Username is wrong");
+            lblWarning.Text = "Username is wrong";
         }
-        
+
     }
 }

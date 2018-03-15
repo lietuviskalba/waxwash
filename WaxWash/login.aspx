@@ -107,7 +107,9 @@
                     <td class="auto-style2">
                         <asp:Button ID="btnLogin" runat="server" Text="Login" Width="156px" OnClick="btnLogin_Click" />
                     </td>
-                    <td class="auto-style5">&nbsp;</td>
+                    <td class="auto-style5">
+                        <asp:Label ID="lblWarning" runat="server" BorderColor="White" ForeColor="#FF0066"></asp:Label>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
             </table>
