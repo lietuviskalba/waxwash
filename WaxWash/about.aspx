@@ -53,7 +53,7 @@
         <h3>Matthew</h3>
         <p>about the other him</p>
         <h3>Bogdan</h3>
-        <p>XD</p>
+        <p>Exchange student from Denmark. In this part of the project I was dooing the documentation and the software design artifacts, created the database model and organised meetings. Also, I was working on the feedback page and the regular expressions are done by me. I am really proud that I could do the regexes with the knowledge that I have gotten from another course. I hope that you will enjoy our product as much as we enjoyed doing it!</p>
     </main>
 
     </div>

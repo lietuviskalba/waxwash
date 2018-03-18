@@ -42,8 +42,11 @@ public partial class _Default : System.Web.UI.Page
         int custService = Convert.ToInt32(rdlCustService.SelectedValue);
         int webService = Convert.ToInt32(rdlWebService.SelectedValue);
         int prgQuality = Convert.ToInt32(rdlProgramQual.SelectedValue);
+        string username = txtUsername.Text;
+        string title = txtTitle.Text;
       
         string other = txtOther.Text;
+        other += "-- " + username;
 
         SqlConnection conn = new SqlConnection(change_PATH);
         conn.Open();
@@ -51,13 +54,12 @@ public partial class _Default : System.Web.UI.Page
         cmd.CommandType = CommandType.Text;
         cmd.CommandText = "INSERT INTO feedback VALUES('" + customer_id +
             "', '" + program_id + "', '" + price + "', '" + length + "', '" + custService +
-            "', '" + webService + "', '" + prgQuality + "', '" + overall + "', '" + other + "')";
+            "', '" + webService + "', '" + prgQuality + "', '" + overall + "', '" + title + ", " + other + "')";
         cmd.ExecuteNonQuery();
         
         conn.Close();
-        
-        //Mockup label. Here we will have to redirect the information to the database.
-        lblOutput.Text = price + length + overall + custService + webService + prgQuality  + other;
+
+        Server.Transfer("feedbackConfirmation.aspx");
 
     }
     

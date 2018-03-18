@@ -223,12 +223,14 @@
             </p>
         <p>
                 <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtTitle" Display="Dynamic" ErrorMessage="Please enter a title for your feedback"></asp:RequiredFieldValidator>
             </p>
         <p>
                 <asp:Label ID="lblUsername" runat="server" Text="Username of the user"></asp:Label>
             </p>
             <p>
                 <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtUsername" Display="Dynamic" ErrorMessage="Please enter your username or any name"></asp:RequiredFieldValidator>
         </p>
         <p>Comments:</p>
             <p>
