@@ -25,6 +25,17 @@
         .auto-style5 {
             width: 244px;
         }
+        .auto-style6 {
+            width: 254px;
+            height: 22px;
+        }
+        .auto-style7 {
+            width: 244px;
+            height: 22px;
+        }
+        .auto-style8 {
+            height: 22px;
+        }
     </style>
 </head>
 <body>
@@ -81,17 +92,19 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style2">Log in here!</td>
+                    <td class="auto-style2">
+                        <h1>Log in here!</h1>
+                    </td>
                     <td class="auto-style5">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">Username:</td>
-                    <td class="auto-style5">
+                    <td class="auto-style6">Username:</td>
+                    <td class="auto-style7">
                         <asp:TextBox ID="txtLoginUsername" runat="server" Width="200px"></asp:TextBox>
                     </td>
-                    <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtLoginUsername" ErrorMessage="You need to write your username!"></asp:RequiredFieldValidator>
+                    <td class="auto-style8">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtLoginUsername" ErrorMessage="You need to write your username!" ForeColor="#FF0066"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -100,7 +113,7 @@
                         <asp:TextBox ID="txtLoginPassword" TextMode="Password" runat="server" Width="200px"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLoginPassword" ErrorMessage="You need to write your password!"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLoginPassword" ErrorMessage="You need to write your password!" ForeColor="#FF0066"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -114,8 +127,7 @@
                 </tr>
             </table>
         </div>
-            <p>Don&#39;t have an account? <a href="register.aspx">Register here !</a><asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MyLocalDatabaseConnectionString1 %>" ProviderName="<%$ ConnectionStrings:MyLocalDatabaseConnectionString1.ProviderName %>" SelectCommand="SELECT [testID], [testName] FROM [MyPeopleTEST]"></asp:SqlDataSource>
-        </p>
+            <p>Don&#39;t have an account? <a href="register.aspx">Register here !</a></p>
     </form>
         </main>
         </div>

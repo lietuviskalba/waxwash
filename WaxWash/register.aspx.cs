@@ -16,7 +16,6 @@ public partial class register : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //txtRegisterPassword.PasswordChar = 'O';
     }
 
     protected void btnRegister_Click(object sender, EventArgs e)
@@ -32,8 +31,6 @@ public partial class register : System.Web.UI.Page
             string password = txtRegisterPassword.Text;
             string repeatPassword = txtRegisterRepeatPassword.Text;
 
-            lblStatus.ForeColor = System.Drawing.Color.Red;
-
             //logic
             if (password.Equals(repeatPassword))
             {
@@ -44,14 +41,8 @@ public partial class register : System.Web.UI.Page
                 cmd.CommandText = "INSERT INTO " + tableName + " VALUES('" + firstName + "', '" + lastName + "', '" + address + "', '" + email + "', '" + username + "', '" + password + "')";
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                //output #1
-                lblStatus.Text = "You have Registered!!! Mr." + username;
+                //output 
                 Server.Transfer("login.aspx", true);
-            }
-            else
-            {
-                //output #2
-                lblStatus.Text = "Status: Your password does not match! Make sure it's correct!";   
             }
         }
     }
@@ -71,7 +62,6 @@ public partial class register : System.Web.UI.Page
         else
         {
             args.IsValid = true;
-
         }
     }
 }

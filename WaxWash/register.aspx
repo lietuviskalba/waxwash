@@ -30,8 +30,8 @@
             height: 27px;
         }
         .auto-style5 {
-            width: 244px;
-        }
+                width: 220px;
+            }
             http://localhost:50914/register.aspx .auto-style6 {
                 height: 27px;
                 width: 244px;
@@ -41,11 +41,14 @@
                 height: 22px;
             }
             .auto-style8 {
-                width: 244px;
+                width: 220px;
                 height: 22px;
             }
             .auto-style9 {
                 height: 22px;
+            }
+            .auto-style10 {
+                width: 375px;
             }
     </style>
 </head>
@@ -80,70 +83,7 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2">
-                        Create account here!<asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:waxwashConnectionString1 %>" DeleteCommand="DELETE FROM [users] WHERE [id] = @id" InsertCommand="INSERT INTO [users] ([f_name], [l_name], [address], [email], [password]) VALUES (@f_name, @l_name, @address, @email, @password)" ProviderName="<%$ ConnectionStrings:waxwashConnectionString1.ProviderName %>" SelectCommand="SELECT [id], [f_name], [l_name], [address], [email], [password] FROM [users]" UpdateCommand="UPDATE [users] SET [f_name] = @f_name, [l_name] = @l_name, [address] = @address, [email] = @email, [password] = @password WHERE [id] = @id">
-                            <DeleteParameters>
-                                <asp:Parameter Name="id" Type="Int32" />
-                            </DeleteParameters>
-                            <InsertParameters>
-                                <asp:Parameter Name="f_name" Type="String" />
-                                <asp:Parameter Name="l_name" Type="String" />
-                                <asp:Parameter Name="address" Type="String" />
-                                <asp:Parameter Name="email" Type="String" />
-                                <asp:Parameter Name="password" Type="String" />
-                            </InsertParameters>
-                            <UpdateParameters>
-                                <asp:Parameter Name="f_name" Type="String" />
-                                <asp:Parameter Name="l_name" Type="String" />
-                                <asp:Parameter Name="address" Type="String" />
-                                <asp:Parameter Name="email" Type="String" />
-                                <asp:Parameter Name="password" Type="String" />
-                                <asp:Parameter Name="id" Type="Int32" />
-                            </UpdateParameters>
-                        </asp:SqlDataSource>
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="id" DataSourceID="SqlDataSource4" EmptyDataText="There are no data records to display." GridLines="Horizontal">
-                            <AlternatingRowStyle BackColor="#F7F7F7" />
-                            <Columns>
-                                <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id" InsertVisible="False" />
-                                <asp:BoundField DataField="f_name" HeaderText="f_name" SortExpression="f_name" />
-                                <asp:BoundField DataField="l_name" HeaderText="l_name" SortExpression="l_name" />
-                                <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" />
-                                <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
-                                <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
-                                <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
-                            </Columns>
-                            <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
-                            <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
-                            <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
-                            <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
-                            <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
-                            <SortedAscendingCellStyle BackColor="#F4F4FD" />
-                            <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
-                            <SortedDescendingCellStyle BackColor="#D8D8F0" />
-                            <SortedDescendingHeaderStyle BackColor="#3E3277" />
-                        </asp:GridView>
-                        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [users]"></asp:SqlDataSource>
-                        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:C:\USERS\MANTA\DESKTOP\WAXWASH\WAXWASH\APP_DATA\WAXWASH2.0.MDFConnectionString1 %>" DeleteCommand="DELETE FROM [users] WHERE [id] = @id" InsertCommand="INSERT INTO [users] ([f_name], [l_name], [address], [email], [username], [password]) VALUES (@f_name, @l_name, @address, @email, @username, @password)" ProviderName="<%$ ConnectionStrings:C:\USERS\MANTA\DESKTOP\WAXWASH\WAXWASH\APP_DATA\WAXWASH2.0.MDFConnectionString1.ProviderName %>" SelectCommand="SELECT [id], [f_name], [l_name], [address], [email], [username], [password] FROM [users]" UpdateCommand="UPDATE [users] SET [f_name] = @f_name, [l_name] = @l_name, [address] = @address, [email] = @email, [username] = @username, [password] = @password WHERE [id] = @id">
-                            <DeleteParameters>
-                                <asp:Parameter Name="id" Type="Int32" />
-                            </DeleteParameters>
-                            <InsertParameters>
-                                <asp:Parameter Name="f_name" Type="String" />
-                                <asp:Parameter Name="l_name" Type="String" />
-                                <asp:Parameter Name="address" Type="String" />
-                                <asp:Parameter Name="email" Type="String" />
-                                <asp:Parameter Name="username" Type="String" />
-                                <asp:Parameter Name="password" Type="String" />
-                            </InsertParameters>
-                            <UpdateParameters>
-                                <asp:Parameter Name="f_name" Type="String" />
-                                <asp:Parameter Name="l_name" Type="String" />
-                                <asp:Parameter Name="address" Type="String" />
-                                <asp:Parameter Name="email" Type="String" />
-                                <asp:Parameter Name="username" Type="String" />
-                                <asp:Parameter Name="password" Type="String" />
-                                <asp:Parameter Name="id" Type="Int32" />
-                            </UpdateParameters>
-                        </asp:SqlDataSource>
+                        <h1 class="auto-style10">Create account here!</h1>
                     </td>
                     <td class="auto-style5">&nbsp;</td>
                     <td>&nbsp;</td>
@@ -154,8 +94,8 @@
                         <asp:TextBox ID="txtRegisterEmail" runat="server" Width="200px"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtRegisterEmail" ErrorMessage="You must enter an email address!" Display="Dynamic"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtRegisterEmail" Display="Dynamic" ErrorMessage="Please insert a valid email address" ValidationExpression="^(([^&lt;&gt;()\[\]\\.,;:\s@&quot;]+(\.[^&lt;&gt;()\[\]\\.,;:\s@&quot;]+)*)|(&quot;.+&quot;))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$"></asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtRegisterEmail" ErrorMessage="You must enter an email address!" Display="Dynamic" ForeColor="#FF3399"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtRegisterEmail" Display="Dynamic" ErrorMessage="Please insert a valid email address" ValidationExpression="^(([^&lt;&gt;()\[\]\\.,;:\s@&quot;]+(\.[^&lt;&gt;()\[\]\\.,;:\s@&quot;]+)*)|(&quot;.+&quot;))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$" ForeColor="#FF0066"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
@@ -164,8 +104,8 @@
                         <asp:TextBox ID="txtFname" runat="server" Width="200px"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtFname" Display="Dynamic" ErrorMessage="Please enter a username"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtFname" Display="Dynamic" ErrorMessage="Insert a valid firstname" ValidationExpression="^([a-zA-Z]{1,})$"></asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtFname" Display="Dynamic" ErrorMessage="Please enter a username" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtFname" Display="Dynamic" ErrorMessage="Insert a valid firstname" ValidationExpression="^([a-zA-Z]{1,})$" ForeColor="#FF0066"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
@@ -174,8 +114,8 @@
                         <asp:TextBox ID="txtLname" runat="server" Width="200px"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtLname" Display="Dynamic" ErrorMessage="Please enter a lastname"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtLname" Display="Dynamic" ErrorMessage="Please insert a valid lastname" ValidationExpression="^([a-zA-Z]{1,})$"></asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtLname" Display="Dynamic" ErrorMessage="Please enter a lastname" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtLname" Display="Dynamic" ErrorMessage="Please insert a valid lastname" ValidationExpression="^([a-zA-Z]{1,})$" ForeColor="#FF0066"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
@@ -184,19 +124,19 @@
                         <asp:TextBox ID="txtAddress" runat="server" Width="200px"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtAddress" Display="Dynamic" ErrorMessage="Please enter an address"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtAddress" Display="Dynamic" ErrorMessage="Please enter an address" ForeColor="#FF0066"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">Username:</td>
-                    <td class="auto-style6">
+                    <td class="auto-style5">
                         <asp:TextBox ID="txtRegisterUsername" runat="server" Width="200px"></asp:TextBox>
                     </td>
                     <td class="auto-style4">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtRegisterUsername" ErrorMessage="You must enter a username!"></asp:RequiredFieldValidator>
-                        <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="This username is taken!" OnServerValidate="CustomValidator1_ServerValidate"></asp:CustomValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtRegisterUsername" Display="Dynamic" ErrorMessage="Username must start with a letter" ValidationExpression="^([a-zA-Z]{1}[a-zA-Z0-9]*)$"></asp:RegularExpressionValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ControlToValidate="txtRegisterUsername" Display="Dynamic" ErrorMessage="Insert a username made of letters and digits" ValidationExpression="^([a-zA-Z0-9]{1,})$"></asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtRegisterUsername" ErrorMessage="You must enter a username!" Display="Dynamic" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+                        <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="This username is taken!" OnServerValidate="CustomValidator1_ServerValidate" Display="Dynamic" ForeColor="#FF0066"></asp:CustomValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtRegisterUsername" Display="Dynamic" ErrorMessage="Username must start with a letter" ValidationExpression="^([a-zA-Z]{1}[a-zA-Z0-9]*)$" ForeColor="#FF0066"></asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ControlToValidate="txtRegisterUsername" Display="Dynamic" ErrorMessage="Insert a username made of letters and digits" ValidationExpression="^([a-zA-Z0-9]{1,})$" ForeColor="#FF0066"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
@@ -205,11 +145,11 @@
                         <asp:TextBox ID="txtRegisterPassword" TextMode="Password" runat="server" Width="200px"></asp:TextBox>
                     </td>
                     <td class="auto-style9">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtRegisterPassword" ErrorMessage="You must enter a password!"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="txtRegisterPassword" Display="Dynamic" ErrorMessage="Password must be 8 to 16 characters long" ValidationExpression="^([a-zA-Z0-9!*]{8,16})$"></asp:RegularExpressionValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server" ControlToValidate="txtRegisterPassword" Display="Dynamic" ErrorMessage="It must start with a letter" ValidationExpression="^([a-zA-Z]{1}[a-zA-Z0-9*!]*)$"></asp:RegularExpressionValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator9" runat="server" ControlToValidate="txtRegisterPassword" Display="Dynamic" ErrorMessage="It must contain at least one digit" ValidationExpression=".*[0-9].*"></asp:RegularExpressionValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator10" runat="server" ControlToValidate="txtRegisterPassword" Display="Dynamic" ErrorMessage="It must contain at least one * or ! symbol" ValidationExpression=".*[*!].*"></asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtRegisterPassword" ErrorMessage="You must enter a password!" Display="Dynamic" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="txtRegisterPassword" Display="Dynamic" ErrorMessage="Password must be 8 to 16 characters long" ValidationExpression="^([a-zA-Z0-9!*]{8,16})$" ForeColor="#FF0066"></asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server" ControlToValidate="txtRegisterPassword" Display="Dynamic" ErrorMessage="It must start with a letter" ValidationExpression="^([a-zA-Z]{1}[a-zA-Z0-9*!]*)$" ForeColor="#FF0066"></asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator9" runat="server" ControlToValidate="txtRegisterPassword" Display="Dynamic" ErrorMessage="It must contain at least one digit" ValidationExpression=".*[0-9].*" ForeColor="#FF0066"></asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator10" runat="server" ControlToValidate="txtRegisterPassword" Display="Dynamic" ErrorMessage="It must contain at least one * or ! symbol" ValidationExpression=".*[*!].*" ForeColor="#FF0066"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
@@ -218,8 +158,8 @@
                         <asp:TextBox ID="txtRegisterRepeatPassword" TextMode="Password" runat="server" Width="200px"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtRegisterRepeatPassword" ErrorMessage="You must repeat your password!" Display="Dynamic"></asp:RequiredFieldValidator>
-                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtRegisterPassword" ControlToValidate="txtRegisterRepeatPassword" Display="Dynamic" ErrorMessage="Passwords must match"></asp:CompareValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtRegisterRepeatPassword" ErrorMessage="You must repeat your password!" Display="Dynamic" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtRegisterPassword" ControlToValidate="txtRegisterRepeatPassword" Display="Dynamic" ErrorMessage="Passwords must match" ForeColor="#FF0066"></asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
@@ -227,8 +167,7 @@
                         <asp:Button ID="btnRegister" runat="server" Text="Register" Width="155px" OnClick="btnRegister_Click" />
                     </td>
                     <td class="auto-style5">
-                        <asp:Label ID="lblStatus" runat="server" Text="Status:"></asp:Label>
-                    </td>
+                        &nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
             </table>
@@ -239,22 +178,6 @@
         <p>Copyright WaxWash Car Wash</p>
         <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825</p>
     </footer>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MyLocalDatabaseConnectionString1 %>" DeleteCommand="DELETE FROM [UserLogin] WHERE [ID] = @ID" InsertCommand="INSERT INTO [UserLogin] ([username], [password], [email]) VALUES (@username, @password, @email)" ProviderName="<%$ ConnectionStrings:MyLocalDatabaseConnectionString1.ProviderName %>" SelectCommand="SELECT [ID], [username], [password], [email] FROM [UserLogin]" UpdateCommand="UPDATE [UserLogin] SET [username] = @username, [password] = @password, [email] = @email WHERE [ID] = @ID">
-            <DeleteParameters>
-                <asp:Parameter Name="ID" Type="Int32" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="username" Type="String" />
-                <asp:Parameter Name="password" Type="String" />
-                <asp:Parameter Name="email" Type="String" />
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="username" Type="String" />
-                <asp:Parameter Name="password" Type="String" />
-                <asp:Parameter Name="email" Type="String" />
-                <asp:Parameter Name="ID" Type="Int32" />
-            </UpdateParameters>
-        </asp:SqlDataSource>
     </form>
         </body>
 </html>

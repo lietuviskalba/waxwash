@@ -45,8 +45,10 @@
     <main>
      <form id="form1" runat="server">
         <div>
-            &nbsp;Your
-            <asp:Label ID="lblFeedback" runat="server" Text="Thank you for the completing the survey. Your feedback is submitted..."></asp:Label>
+            &nbsp;
+            <h1>
+            <asp:Label ID="lblFeedback" runat="server" Text="&nbsp;Thank you for completing the survey. Your feedback is submitted..." ForeColor="#009933"></asp:Label>
+            </h1>
         </div>
     </form>
     </main>
