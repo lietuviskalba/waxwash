@@ -46,7 +46,9 @@
     <main>
      <form id="form1" runat="server">
         <div>
-            <asp:Label ID="lblCongrats" runat="server" Text="Successfully logged in as.."></asp:Label>
+            <h1>
+            <asp:Label ID="lblCongrats" runat="server" Text="Congratulations! You successfully logged in!" ForeColor="#00CC00"></asp:Label>
+            </h1>
         </div>
     </form>
     </main>
