@@ -39,13 +39,33 @@ public partial class login : System.Web.UI.Page
         if (temp == 1)
         {
             conn.Open();
-            string checkPassQuery = "SELECT password FROM " + tableName + " WHERE username='" + username + "'";
-            SqlCommand passCMD = new SqlCommand(checkPassQuery, conn);
-            string passwordCheck = passCMD.ExecuteScalar().ToString().Replace(" ","");
+            string checkPassQuery = "SELECT * FROM " + tableName + " WHERE username='" + username + "'";
+            SqlCommand cmmd = new SqlCommand(checkPassQuery, conn);
+            SqlDataReader dr = cmmd.ExecuteReader();
+            User u = new User();
+            if (dr.HasRows) {
+
+                while (dr.Read())
+                {
+
+                    u.userId = dr.GetInt32(0);
+                    u.f_name = dr.GetString(1);
+                    u.l_name = dr.GetString(2);
+                    u.address = dr.GetString(3);
+                    u.email = dr.GetString(4);
+                    u.username = dr.GetString(5);
+                    u.password = dr.GetString(6);
+
+            }
+                lblWarning.Text = u.username;
+                dr.Close();
+            }
+            string passwordCheck = cmmd.ExecuteScalar().ToString().Replace(" ","");
             conn.Close();
             //Check to see that the password matches from the database
-            if (passwordCheck.Equals(password))
+            if (u.password.Equals(password))
             {
+                Session["user"] = u;
                 Server.Transfer("confirmationLogin.aspx", true);
             }
             else

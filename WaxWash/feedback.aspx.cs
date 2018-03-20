@@ -32,7 +32,8 @@ public partial class _Default : System.Web.UI.Page
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-        int customer_id = 1;
+        User u = (User) Session["user"];
+        int customer_id = u.userId;
         int program_id = ddlUsedProgram.SelectedIndex + 1;
         
 
@@ -52,9 +53,9 @@ public partial class _Default : System.Web.UI.Page
         conn.Open();
         SqlCommand cmd = conn.CreateCommand();
         cmd.CommandType = CommandType.Text;
-        cmd.CommandText = "INSERT INTO feedback VALUES('" + customer_id +
-            "', '" + program_id + "', '" + price + "', '" + length + "', '" + custService +
-            "', '" + webService + "', '" + prgQuality + "', '" + overall + "', '" + title + ", " + other + "')";
+        cmd.CommandText = "INSERT INTO feedback VALUES(" + customer_id +
+            ", " + program_id + ", " + price + ", " + length + ", " + custService +
+            ", " + webService + ", " + prgQuality + ", " + overall + ", '" + title + "', '" + other + "')";
         cmd.ExecuteNonQuery();
         
         conn.Close();
