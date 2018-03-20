@@ -84,21 +84,6 @@
         </h3>
         <h3 style="width: 495px">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="rdlWebService" Display="Dynamic" ErrorMessage="Ups! You forgot to give us feedback on the Web Services"></asp:RequiredFieldValidator>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource2" EmptyDataText="There are no data records to display.">
-                <Columns>
-                    <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id" InsertVisible="False" />
-                    <asp:BoundField DataField="user_id_fk" HeaderText="user_id_fk" SortExpression="user_id_fk" />
-                    <asp:BoundField DataField="program_id_fk" HeaderText="program_id_fk" SortExpression="program_id_fk" />
-                    <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" />
-                    <asp:BoundField DataField="length" HeaderText="length" SortExpression="length" />
-                    <asp:BoundField DataField="cust_service" HeaderText="cust_service" SortExpression="cust_service" />
-                    <asp:BoundField DataField="web_service" HeaderText="web_service" SortExpression="web_service" />
-                    <asp:BoundField DataField="program_qual" HeaderText="program_qual" SortExpression="program_qual" />
-                    <asp:BoundField DataField="overall" HeaderText="overall" SortExpression="overall" />
-                    <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
-                    <asp:BoundField DataField="other" HeaderText="other" SortExpression="other" />
-                </Columns>
-            </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [feedback] WHERE [id] = @id" InsertCommand="INSERT INTO [feedback] ([user_id_fk], [program_id_fk], [price], [length], [cust_service], [web_service], [program_qual], [overall], [title], [other]) VALUES (@user_id_fk, @program_id_fk, @price, @length, @cust_service, @web_service, @program_qual, @overall, @title, @other)" SelectCommand="SELECT * FROM [feedback]" UpdateCommand="UPDATE [feedback] SET [user_id_fk] = @user_id_fk, [program_id_fk] = @program_id_fk, [price] = @price, [length] = @length, [cust_service] = @cust_service, [web_service] = @web_service, [program_qual] = @program_qual, [overall] = @overall, [title] = @title, [other] = @other WHERE [id] = @id">
                 <DeleteParameters>
                     <asp:Parameter Name="id" Type="Int32" />
@@ -236,8 +221,7 @@
             <p>
                 <asp:TextBox id="txtOther" TextMode="multiline" Columns="50" Rows="5" runat="server" /></p>
             <p>
-                <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit Feedback" Width="121px" />
-                <asp:Label ID="lblOutput" runat="server" Text="Label"></asp:Label>
+                <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit Feedback" Width="220px" />
             </p>
             <p>
 

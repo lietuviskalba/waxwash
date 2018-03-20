@@ -72,7 +72,7 @@
 
         <p>
         <button class="button" id="btnBookWash" type="button" onclick="location.href='login.aspx'">Book a Wash</button>
-        <button class="button" id="btnRegister" type="button" onclick="location.href='login.aspx'">Register</button>
+        <button class="button" id="btnRegister" type="button" onclick="location.href='register.aspx'">Register</button>
 
         </p>
         <p>&nbsp;</p>
