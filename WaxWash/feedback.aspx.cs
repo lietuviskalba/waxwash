@@ -33,34 +33,48 @@ public partial class _Default : System.Web.UI.Page
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
         User u = (User) Session["user"];
-        int customer_id = u.userId;
-        int program_id = ddlUsedProgram.SelectedIndex + 1;
-        
+        int customer_id = 0;
+        try
+        {
+            customer_id = u.userId;
+        }
+        catch (Exception) {
 
-        int price = Convert.ToInt32(rdlPrice.SelectedValue);
-        int length = Convert.ToInt32(rdlLength.SelectedValue);
-        int overall = Convert.ToInt32(rdlOverall.SelectedValue);
-        int custService = Convert.ToInt32(rdlCustService.SelectedValue);
-        int webService = Convert.ToInt32(rdlWebService.SelectedValue);
-        int prgQuality = Convert.ToInt32(rdlProgramQual.SelectedValue);
-        string username = txtUsername.Text;
-        string title = txtTitle.Text;
-      
-        string other = txtOther.Text;
-        other += "-- " + username;
+        }
+       
+        if (customer_id != 0)
+        {
+            int program_id = ddlUsedProgram.SelectedIndex + 1;
 
-        SqlConnection conn = new SqlConnection(change_PATH);
-        conn.Open();
-        SqlCommand cmd = conn.CreateCommand();
-        cmd.CommandType = CommandType.Text;
-        cmd.CommandText = "INSERT INTO feedback VALUES(" + customer_id +
-            ", " + program_id + ", " + price + ", " + length + ", " + custService +
-            ", " + webService + ", " + prgQuality + ", " + overall + ", '" + title + "', '" + other + "')";
-        cmd.ExecuteNonQuery();
-        
-        conn.Close();
 
-        Server.Transfer("feedbackConfirmation.aspx");
+            int price = Convert.ToInt32(rdlPrice.SelectedValue);
+            int length = Convert.ToInt32(rdlLength.SelectedValue);
+            int overall = Convert.ToInt32(rdlOverall.SelectedValue);
+            int custService = Convert.ToInt32(rdlCustService.SelectedValue);
+            int webService = Convert.ToInt32(rdlWebService.SelectedValue);
+            int prgQuality = Convert.ToInt32(rdlProgramQual.SelectedValue);
+            string username = txtUsername.Text;
+            string title = txtTitle.Text;
+
+            string other = txtOther.Text;
+            other += "-> " + username;
+
+            SqlConnection conn = new SqlConnection(change_PATH);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "INSERT INTO feedback VALUES(" + customer_id +
+                ", " + program_id + ", " + price + ", " + length + ", " + custService +
+                ", " + webService + ", " + prgQuality + ", " + overall + ", '" + title + "', '" + other + "')";
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+
+            Server.Transfer("feedbackConfirmation.aspx");
+        }
+        else {
+            lblRegister.Text = "Please log in before leaving a feedback!";
+        }
 
     }
     

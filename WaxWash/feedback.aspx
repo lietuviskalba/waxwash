@@ -248,11 +248,17 @@
             }
             document.getElementById("txtOther").value = "";
             document.getElementById("ddlUsedProgram").selectedIndex = 0;
+            document.getElementById("txtUsername").value = "";
+            document.getElementById("txtTitle").value = "";
 
         }
 
 
     </script>
+            </p>
+        <p>
+
+            <asp:Label ID="lblRegister" runat="server"></asp:Label>
             </p>
         </form>
         </main>
