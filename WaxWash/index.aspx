@@ -92,7 +92,7 @@
     </div>
        <footer>
         <p>Copyright WaxWash Car Wash</p>
-        <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825</p>
+        <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825 - Kyung Woog Steve Min 101024241 - Myles Watson 101061621</p>
     </footer>
 </body>
 </html>

@@ -54,13 +54,19 @@
         <p>Matthew Smalley is a student from Toronto, Ontario studying in the Commputer Programmer Analyst program at George Brown College.  He did much of the CSS and formatting for the website, and worked on some of the visual assets.</p>
         <h3>Bogdan</h3>
         <p>Exchange student from Denmark. In this part of the project I was dooing the documentation and the software design artifacts, created the database model and organised meetings. Also, I was working on the feedback page and the regular expressions are done by me. I am really proud that I could do the regexes with the knowledge that I have gotten from another course. I hope that you will enjoy our product as much as we enjoyed doing it!</p>
+        <h3>Steve</h3>
+        <p>Kyung Woog Steve Min moved to Canada at a younge age and prefers to go by Steve because its easier to pronounce.
+        <h3>Myles</h3>
+        <p>Myles Watson was born in Canadian, and is currently studying at George Brown College in the Computer Analyst Program.</p>
+        </p>
+        
     </main>
 
     </div>
 
         <footer>
         <p>Copyright WaxWash Car Wash</p>
-        <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825</p>
+        <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825 - Kyung Woog Steve Min 101024241 - Myles Watson 101061621</p>
     </footer>
 </body>
 </html>
