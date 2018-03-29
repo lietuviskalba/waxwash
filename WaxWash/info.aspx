@@ -1,47 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="info.aspx.cs" Inherits="info" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="info.aspx.cs" Inherits="info" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <link href="Styles/styles.css" rel="stylesheet" type="text/css" />
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title></title>
-</head>
-<body>
-    <div class="wrapper">
-<header>
-    <%--
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <ul class="nav navbar-nav" >
-                <li role="presentation"><a href="index.aspx">Home</a></li>
-                <li role="presentation"><a href="info.aspx">Information Page</a></li>
-                <li role="presentation"><a href="feedback.aspx">Feedback</a></li>
-                <li role="presentation"><a href="about.aspx">About us</a></li>
-                <li role="presentation"><a href="login.aspx">Login/registration</a></li>
-            </ul>
-        </div>
-    </nav>
-         --%>
-    <div class="nav">
-      <ul>
-        <li class="home"><a href="index.aspx">Home</a></li>
-        <li class="information"><a class="active" href="info.aspx">Information</a></li>
-        <li class="feedback"><a href="feedback.aspx">Feedback</a></li>
-        <li class="about"><a href="about.aspx">About Us</a></li>
-        <li class="login"><a href="login.aspx">Login/register</a></li>
-      </ul>
-    </div>
-</header>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
     <main>
         <h2>Introduction</h2>
         <p> <h3> How it all started </h3></p>
@@ -80,12 +41,6 @@
         <h2>Link to our YouTube chanel</h2>
 
         <div> <h3> <a href="https://www.youtube.com/watch?v=LvrdB0w_v9M"> Our youtube chanel! </a>  </h3>  </div>
-        
     </main>
-    </div>
-    <footer>
-        <p>Copyright WaxWash Car Wash</p>
-        <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825 - Kyung Woog Steve Min 101024241 - Myles Watson 101061621</p>
-    </footer>
-</body>
-</html>
+</asp:Content>
+

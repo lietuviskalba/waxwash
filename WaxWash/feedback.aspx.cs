@@ -7,7 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 
-public partial class _Default : System.Web.UI.Page
+public partial class feedback : System.Web.UI.Page
 {
     static string change_PATH = ChangePathHere.path_CHANGE;
     SqlConnection conn = new SqlConnection(change_PATH);
@@ -15,13 +15,15 @@ public partial class _Default : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
-        if (!IsPostBack) {
+        if (!IsPostBack)
+        {
             SqlConnection conn = new SqlConnection(change_PATH);
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT id, name FROM programs;", conn);
             SqlDataReader dr = cmd.ExecuteReader();
 
-            while (dr.Read()) {
+            while (dr.Read())
+            {
 
                 ddlUsedProgram.Items.Add(dr[0].ToString() + dr[1].ToString());
             }
@@ -32,16 +34,17 @@ public partial class _Default : System.Web.UI.Page
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-        User u = (User) Session["user"];
+        User u = (User)Session["user"];
         int customer_id = 0;
         try
         {
             customer_id = u.userId;
         }
-        catch (Exception) {
+        catch (Exception)
+        {
 
         }
-       
+
         if (customer_id != 0)
         {
             int program_id = ddlUsedProgram.SelectedIndex + 1;
@@ -72,10 +75,11 @@ public partial class _Default : System.Web.UI.Page
 
             Server.Transfer("feedbackConfirmation.aspx");
         }
-        else {
+        else
+        {
             lblRegister.Text = "Please log in before leaving a feedback!";
         }
 
     }
-    
+
 }

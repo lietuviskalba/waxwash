@@ -43,7 +43,8 @@ public partial class login : System.Web.UI.Page
             SqlCommand cmmd = new SqlCommand(checkPassQuery, conn);
             SqlDataReader dr = cmmd.ExecuteReader();
             User u = new User();
-            if (dr.HasRows) {
+            if (dr.HasRows)
+            {
 
                 while (dr.Read())
                 {
@@ -56,11 +57,11 @@ public partial class login : System.Web.UI.Page
                     u.username = dr.GetString(5);
                     u.password = dr.GetString(6);
 
-            }
+                }
                 lblWarning.Text = u.username;
                 dr.Close();
             }
-            string passwordCheck = cmmd.ExecuteScalar().ToString().Replace(" ","");
+            string passwordCheck = cmmd.ExecuteScalar().ToString().Replace(" ", "");
             conn.Close();
             //Check to see that the password matches from the database
             if (u.password.Equals(password))
@@ -71,7 +72,7 @@ public partial class login : System.Web.UI.Page
             else
             {
                 lblWarning.Text = "Password is wrong";
-            }           
+            }
         }
         else
         {

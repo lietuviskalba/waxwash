@@ -1,84 +1,54 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="register.aspx.cs" Inherits="register" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="register.aspx.cs" Inherits="register" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <link href="Styles/styles.css" rel="stylesheet" type="text/css" />
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <title></title>
-        <style type="text/css">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style type="text/css">
         .auto-style1 {
             width: 100%;
         }
+
         .auto-style2 {
             width: 254px;
         }
+
         .auto-style3 {
             width: 254px;
             height: 27px;
         }
+
         .auto-style4 {
             height: 27px;
         }
+
         .auto-style5 {
-                width: 220px;
-            }
-            http://localhost:50914/register.aspx .auto-style6 {
-                height: 27px;
-                width: 244px;
-            }
-            .auto-style7 {
-                width: 254px;
-                height: 22px;
-            }
-            .auto-style8 {
-                width: 220px;
-                height: 22px;
-            }
-            .auto-style9 {
-                height: 22px;
-            }
-            .auto-style10 {
-                width: 375px;
-            }
+            width: 220px;
+        }
+
+        http://localhost:50914/registerNew.aspx .auto-style6 {
+            height: 27px;
+            width: 244px;
+        }
+
+        .auto-style7 {
+            width: 254px;
+            height: 22px;
+        }
+
+        .auto-style8 {
+            width: 220px;
+            height: 22px;
+        }
+
+        .auto-style9 {
+            height: 22px;
+        }
+
+        .auto-style10 {
+            width: 375px;
+        }
     </style>
-</head>
-<body>
-<header>
-    <%--
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <ul class="nav navbar-nav" >
-                <li role="presentation"><a href="index.aspx">Home</a></li>
-                <li role="presentation"><a href="info.aspx">Information Page</a></li>
-                <li role="presentation"><a href="feedback.aspx">Feedback</a></li>
-                <li role="presentation"><a href="about.aspx">About us</a></li>
-                <li role="presentation"><a href="login.aspx">Login/registration</a></li>
-            </ul>
-        </div>
-    </nav>
-         --%>
-    <div class="nav">
-      <ul>
-        <li class="home"><a href="index.aspx">Home</a></li>
-        <li class="information"><a href="info.aspx">Information</a></li>
-        <li class="feedback"><a href="feedback.aspx">Feedback</a></li>
-        <li class="about"><a href="about.aspx">About Us</a></li>
-        <li class="login"><a class="active" href="login.aspx">Login/register</a></li>
-      </ul>
-    </div>
-</header>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
     <main>
-    <form id="form1" runat="server">
         <div>
             <table class="auto-style1">
                 <tr>
@@ -166,18 +136,12 @@
                     <td class="auto-style2">
                         <asp:Button ID="btnRegister" runat="server" Text="Register" Width="155px" OnClick="btnRegister_Click" />
                     </td>
-                    <td class="auto-style5">
-                        &nbsp;</td>
+                    <td class="auto-style5">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
             </table>
         </div>
         <p>Have an account? <a href="login.aspx">Login here!</a></p>
-        </main>
-    <footer>
-        <p>Copyright WaxWash Car Wash</p>
-        <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825 - Kyung Woog Steve Min 101024241 - Myles Watson 101061621</p>
-    </footer>
-    </form>
-        </body>
-</html>
+    </main>
+</asp:Content>
+
