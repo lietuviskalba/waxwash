@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title=""  description="">
+    <siteMapNode url="~/bookings.aspx" title="Bookings"  description="See and manage the bookings" />
+    <siteMapNode url="~/extras.aspx" title="Extras"  description="See and manage the extras" />
+    <siteMapNode url="~/feedb.aspx" title="Feedback"  description="See and manage the feedback" />
+    <siteMapNode url="~/programs.aspx" title="Programs"  description="See and manage washing programs" />
+    <siteMapNode url="~/users.aspx" title="Users"  description="See and manage users" />
+  </siteMapNode>
+</siteMap>
