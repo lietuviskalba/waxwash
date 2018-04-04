@@ -6,9 +6,15 @@
     <main>
         <div>
             <h1>
+                &nbsp;</h1>
+            <h1>
                 <asp:Label ID="lblCongrats" runat="server" Text="Congratulations! You successfully logged in!" ForeColor="#00CC00"></asp:Label>
+            &nbsp;Mr.
+                <asp:Label ID="lblUsername" runat="server" Text="lblUsername"></asp:Label>
             </h1>
         </div>
+        <p>Would you like to update you account? Do so here !<asp:Button ID="btnUpdareAcc" runat="server" OnClick="btnUpdareAcc_Click" Text="Update account" />
+            </a></p>
     </main>
 </asp:Content>
 

@@ -67,7 +67,8 @@ public partial class login : System.Web.UI.Page
             if (u.password.Equals(password))
             {
                 Session["user"] = u;
-                Server.Transfer("confirmationLogin.aspx", true);
+                Response.Redirect("confirmationLogin.aspx?usernameLoginn=" + txtLoginUsername.Text);
+                //Server.Transfer("confirmationLogin.aspx", true);
             }
             else
             {

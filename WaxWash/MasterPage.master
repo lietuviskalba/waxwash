@@ -34,7 +34,7 @@
          --%>
             <div class="nav">
                 <ul>
-                    <li class="home"><a class="active" href="index.aspx">Home</a></li>
+                    <li class="home"><a href="index.aspx">Home</a></li>
                     <li class="information"><a href="info.aspx">Information</a></li>
                     <li class="feedback"><a href="feedback.aspx">Feedback</a></li>
                     <li class="about"><a href="about.aspx">About Us</a></li>
