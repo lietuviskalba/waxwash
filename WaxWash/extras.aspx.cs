@@ -9,8 +9,14 @@ public partial class Default4 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (!Page.IsPostBack)
+        {
+            GridView1.DataBind();
+        }
+    }
 
+    protected void DetailsView1_ItemInserted(object sender, DetailsViewInsertedEventArgs e)
+    {
         GridView1.DataBind();
-
     }
 }
