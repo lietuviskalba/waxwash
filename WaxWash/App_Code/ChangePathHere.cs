@@ -14,7 +14,7 @@ public class ChangePathHere
     static string guest_PATH = @"[ADD PATH HERE]";
 
     //Change the path here
-    public static  string path_CHANGE = mantas_PATH;
+    public static  string path_CHANGE = bog_PATH;
 
 
 }
