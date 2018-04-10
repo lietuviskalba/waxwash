@@ -108,7 +108,7 @@
                     </td>
         </tr>
         <tr>
-            <td class="auto-style14">Passoword</td>
+            <td class="auto-style14">Password</td>
             <td class="auto-style15">
                 <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update Password" />
             </td>
