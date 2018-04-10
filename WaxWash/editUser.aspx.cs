@@ -16,14 +16,12 @@ public partial class EditUser : System.Web.UI.Page
 
     private void SetTextBoxText()
     {
-        string username = Request.QueryString["labelUsername"];
+        string username = Request.QueryString["Username"];
 
         string setF_Name    = "";
         string setL_Name    = "";
         string setAddress   = "";
         string setEmail     = "";
-        string setUsername  = "";
-        string setPassword  = "";
 
         //Get values from database and store into proper strings
         conn.Open();
@@ -38,38 +36,34 @@ public partial class EditUser : System.Web.UI.Page
                 setL_Name = dr.GetString(2);
                 setAddress = dr.GetString(3);
                 setEmail = dr.GetString(4);
-                setUsername = dr.GetString(5);
-                setPassword = dr.GetString(6);
             }
             dr.Close();
         }
         conn.Close();
 
         //Set Textbox text to info from database if they are empty!
-        if (txtF_Name.Text.Equals(""))
+        if (txtEmail.Text.Equals(""))
         {
             txtF_Name.Text   = setF_Name;
             txtL_Name.Text   = setL_Name;
             txtAddress.Text  = setAddress;
             txtEmail.Text    = setEmail;
-            txtPassword.Text = setPassword;
-            txtPasswordRepeat.Text = setPassword;
-        }
-    }
+        }     
+    }  
 
     protected void Page_Load(object sender, EventArgs e)
-    {  
-        SetTextBoxText();    
+    {      
+            SetTextBoxText();                      
     }
-
+    
     private void UpdateInfo()
     {
-        string username = Request.QueryString["labelUsername"];
         string newFname     = txtF_Name.Text;
         string newLname     = txtL_Name.Text;
         string newAddress   = txtAddress.Text;
         string newEmail     = txtEmail.Text;
-        string newPassword   = txtPassword.Text;
+
+        string username = Request.QueryString["Username"];
 
         //logic
         conn.Open();
@@ -77,8 +71,7 @@ public partial class EditUser : System.Web.UI.Page
             "f_name=    '" + newFname    +   "', " +
             "l_name=    '" + newLname    +   "', " +
             "address=   '" + newAddress  +   "', " +
-            "email=     '" + newEmail    +   "', " +
-            "password=  '" + newPassword +   "'  " +
+            "email=     '" + newEmail    +   "'  " +
             "WHERE username='" + username + "'";
         SqlCommand cmd = new SqlCommand(updateInfo, conn);
         cmd.ExecuteNonQuery();
@@ -93,12 +86,14 @@ public partial class EditUser : System.Web.UI.Page
             lblUpdateStatus.Text = "Update status: Successful!!!";
             lblUpdateStatus.ForeColor = System.Drawing.Color.Honeydew;
             lblUpdateStatus.BackColor = System.Drawing.Color.Green;
-            //Response.Redirect(Request.RawUrl);
         }
     }
 
-    protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
+    protected void Button1_Click(object sender, EventArgs e)
     {
-        
+        string username = Request.QueryString["Username"];
+        Response.Redirect("EditPassword.aspx?Username=" + username);
     }
+
+   
 }

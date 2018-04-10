@@ -81,4 +81,9 @@ public partial class login : System.Web.UI.Page
         }
 
     }
+
+    protected void txtLoginPassword_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }

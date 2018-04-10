@@ -41,6 +41,17 @@
         .auto-style13 {
             height: 22px;
         }
+        .auto-style14 {
+            width: 194px;
+            height: 14px;
+        }
+        .auto-style15 {
+            width: 312px;
+            height: 14px;
+        }
+        .auto-style16 {
+            height: 14px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
@@ -97,27 +108,12 @@
                     </td>
         </tr>
         <tr>
-            <td class="auto-style1">Password</td>
-            <td class="auto-style2">
-                <asp:TextBox ID="txtPassword" runat="server"  Width="195px"></asp:TextBox>
+            <td class="auto-style14">Passoword</td>
+            <td class="auto-style15">
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update Password" />
             </td>
-            <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPassword" ErrorMessage="You must enter a password!" Display="Dynamic" ForeColor="#FF0066"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="txtPassword" Display="Dynamic" ErrorMessage="Password must be 8 to 16 characters long" ValidationExpression="^([a-zA-Z0-9!*]{8,16})$" ForeColor="#FF0066"></asp:RegularExpressionValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server" ControlToValidate="txtPassword" Display="Dynamic" ErrorMessage="It must start with a letter" ValidationExpression="^([a-zA-Z]{1}[a-zA-Z0-9*!]*)$" ForeColor="#FF0066"></asp:RegularExpressionValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator9" runat="server" ControlToValidate="txtPassword" Display="Dynamic" ErrorMessage="It must contain at least one digit" ValidationExpression=".*[0-9].*" ForeColor="#FF0066"></asp:RegularExpressionValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator10" runat="server" ControlToValidate="txtPassword" Display="Dynamic" ErrorMessage="It must contain at least one * or ! symbol" ValidationExpression=".*[*!].*" ForeColor="#FF0066"></asp:RegularExpressionValidator>
-                    </td>
-        </tr>
-        <tr>
-            <td class="auto-style1">Repeat password</td>
-            <td class="auto-style2">
-                <asp:TextBox ID="txtPasswordRepeat" runat="server" Width="195px"></asp:TextBox>
-            </td>
-            <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPasswordRepeat" ErrorMessage="You must repeat your password!" Display="Dynamic" ForeColor="#FF0066"></asp:RequiredFieldValidator>
-                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtPasswordRepeat" Display="Dynamic" ErrorMessage="Passwords must match" ForeColor="#FF0066"></asp:CompareValidator>
-                    </td>
+            <td class="auto-style16">
+                        </td>
         </tr>
         <tr>
             <td class="auto-style8">

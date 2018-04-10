@@ -14,7 +14,7 @@ public partial class confirmationLogin : System.Web.UI.Page
 
     protected void btnUpdareAcc_Click(object sender, EventArgs e)
     {
-        Response.Redirect("EditUser.aspx?labelUsername=" + lblUsername.Text);
+        Response.Redirect("EditUser.aspx?Username=" + lblUsername.Text);
         //Server.Transfer("EditUser.aspx", true);
     }
 }

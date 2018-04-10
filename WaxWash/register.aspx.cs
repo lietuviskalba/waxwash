@@ -23,13 +23,13 @@ public partial class register : System.Web.UI.Page
         if (IsValid)
         {
             //input
-            string email = txtRegisterEmail.Text;
-            string firstName = txtFname.Text;
-            string lastName = txtLname.Text;
-            string address = txtAddress.Text;
-            string username = txtRegisterUsername.Text;
-            string password = txtRegisterPassword.Text;
-            string repeatPassword = txtRegisterRepeatPassword.Text;
+            string email = txtRegisterEmail.Value;
+            string firstName = txtFname.Value;
+            string lastName = txtLname.Value;
+            string address = txtAddress.Value;
+            string username = txtRegisterUsername.Value;
+            string password = txtRegisterPassword.Value;
+            string repeatPassword = txtRegisterRepeatPassword.Value;
 
             //logic
             if (password.Equals(repeatPassword))
@@ -51,7 +51,7 @@ public partial class register : System.Web.UI.Page
     {
         //Check if there are duplicate usernames
         conn.Open();
-        string checkUser = "SELECT count(*) FROM " + tableName + " WHERE username='" + txtRegisterUsername.Text + "'";
+        string checkUser = "SELECT count(*) FROM " + tableName + " WHERE username='" + txtRegisterUsername.Value + "'";
         SqlCommand cmd = new SqlCommand(checkUser, conn);
         int temp = Convert.ToInt32(cmd.ExecuteScalar().ToString());
         conn.Close();
