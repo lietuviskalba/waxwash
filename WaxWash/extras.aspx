@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:Label ID="Label1" runat="server" Text="In order to edit an item please press the edit button. To delete press the delete button. To insert please press the select button on any of the items and then click the new button on the new element that showed up."></asp:Label>
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnRowDeleted="GridView1_RowDeleted" OnRowUpdated="GridView1_RowUpdated">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
@@ -25,33 +25,7 @@
         <SortedDescendingCellStyle BackColor="#E9EBEF" />
         <SortedDescendingHeaderStyle BackColor="#4870BE" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [extras] WHERE [id] = @original_id AND [name] = @original_name AND [price] = @original_price AND (([description] = @original_description) OR ([description] IS NULL AND @original_description IS NULL)) AND (([image_src] = @original_image_src) OR ([image_src] IS NULL AND @original_image_src IS NULL))" InsertCommand="INSERT INTO [extras] ([name], [price], [description], [image_src]) VALUES (@name, @price, @description, @image_src)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [extras]" UpdateCommand="UPDATE [extras] SET [name] = @name, [price] = @price, [description] = @description, [image_src] = @image_src WHERE [id] = @original_id AND [name] = @original_name AND [price] = @original_price AND (([description] = @original_description) OR ([description] IS NULL AND @original_description IS NULL)) AND (([image_src] = @original_image_src) OR ([image_src] IS NULL AND @original_image_src IS NULL))">
-        <DeleteParameters>
-            <asp:Parameter Name="original_id" Type="Int32" />
-            <asp:Parameter Name="original_name" Type="String" />
-            <asp:Parameter Name="original_price" Type="Double" />
-            <asp:Parameter Name="original_description" Type="String" />
-            <asp:Parameter Name="original_image_src" Type="String" />
-        </DeleteParameters>
-        <InsertParameters>
-            <asp:Parameter Name="name" Type="String" />
-            <asp:Parameter Name="price" Type="Double" />
-            <asp:Parameter Name="description" Type="String" />
-            <asp:Parameter Name="image_src" Type="String" />
-        </InsertParameters>
-        <UpdateParameters>
-            <asp:Parameter Name="name" Type="String" />
-            <asp:Parameter Name="price" Type="Double" />
-            <asp:Parameter Name="description" Type="String" />
-            <asp:Parameter Name="image_src" Type="String" />
-            <asp:Parameter Name="original_id" Type="Int32" />
-            <asp:Parameter Name="original_name" Type="String" />
-            <asp:Parameter Name="original_price" Type="Double" />
-            <asp:Parameter Name="original_description" Type="String" />
-            <asp:Parameter Name="original_image_src" Type="String" />
-        </UpdateParameters>
-    </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [extras] WHERE [id] = @original_id AND [name] = @original_name AND [price] = @original_price AND (([description] = @original_description) OR ([description] IS NULL AND @original_description IS NULL)) AND (([image_src] = @original_image_src) OR ([image_src] IS NULL AND @original_image_src IS NULL))" InsertCommand="INSERT INTO [extras] ([name], [price], [description], [image_src]) VALUES (@name, @price, @description, @image_src)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [extras] WHERE ([id] = @id)" UpdateCommand="UPDATE [extras] SET [name] = @name, [price] = @price, [description] = @description, [image_src] = @image_src WHERE [id] = @original_id AND [name] = @original_name AND [price] = @original_price AND (([description] = @original_description) OR ([description] IS NULL AND @original_description IS NULL)) AND (([image_src] = @original_image_src) OR ([image_src] IS NULL AND @original_image_src IS NULL))">
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:waxwash2.0ConnectionString %>" DeleteCommand="DELETE FROM [extras] WHERE [id] = @original_id AND [name] = @original_name AND [price] = @original_price AND (([description] = @original_description) OR ([description] IS NULL AND @original_description IS NULL)) AND (([image_src] = @original_image_src) OR ([image_src] IS NULL AND @original_image_src IS NULL))" InsertCommand="INSERT INTO [extras] ([name], [price], [description], [image_src]) VALUES (@name, @price, @description, @image_src)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [extras] WHERE ([id] = @id)" UpdateCommand="UPDATE [extras] SET [name] = @name, [price] = @price, [description] = @description, [image_src] = @image_src WHERE [id] = @original_id AND [name] = @original_name AND [price] = @original_price AND (([description] = @original_description) OR ([description] IS NULL AND @original_description IS NULL)) AND (([image_src] = @original_image_src) OR ([image_src] IS NULL AND @original_image_src IS NULL))">
         <DeleteParameters>
             <asp:Parameter Name="original_id" Type="Int32" />
             <asp:Parameter Name="original_name" Type="String" />
@@ -80,6 +54,33 @@
             <asp:Parameter Name="original_image_src" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:waxwash2.0ConnectionString %>" DeleteCommand="DELETE FROM [extras] WHERE [id] = @original_id AND [name] = @original_name AND [price] = @original_price AND (([description] = @original_description) OR ([description] IS NULL AND @original_description IS NULL)) AND (([image_src] = @original_image_src) OR ([image_src] IS NULL AND @original_image_src IS NULL))" InsertCommand="INSERT INTO [extras] ([name], [price], [description], [image_src]) VALUES (@name, @price, @description, @image_src)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [extras]" UpdateCommand="UPDATE [extras] SET [name] = @name, [price] = @price, [description] = @description, [image_src] = @image_src WHERE [id] = @original_id AND [name] = @original_name AND [price] = @original_price AND (([description] = @original_description) OR ([description] IS NULL AND @original_description IS NULL)) AND (([image_src] = @original_image_src) OR ([image_src] IS NULL AND @original_image_src IS NULL))">
+        <DeleteParameters>
+            <asp:Parameter Name="original_id" Type="Int32" />
+            <asp:Parameter Name="original_name" Type="String" />
+            <asp:Parameter Name="original_price" Type="Double" />
+            <asp:Parameter Name="original_description" Type="String" />
+            <asp:Parameter Name="original_image_src" Type="String" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:Parameter Name="name" Type="String" />
+            <asp:Parameter Name="price" Type="Double" />
+            <asp:Parameter Name="description" Type="String" />
+            <asp:Parameter Name="image_src" Type="String" />
+        </InsertParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="name" Type="String" />
+            <asp:Parameter Name="price" Type="Double" />
+            <asp:Parameter Name="description" Type="String" />
+            <asp:Parameter Name="image_src" Type="String" />
+            <asp:Parameter Name="original_id" Type="Int32" />
+            <asp:Parameter Name="original_name" Type="String" />
+            <asp:Parameter Name="original_price" Type="Double" />
+            <asp:Parameter Name="original_description" Type="String" />
+            <asp:Parameter Name="original_image_src" Type="String" />
+        </UpdateParameters>
+    </asp:SqlDataSource>
+    <asp:Label ID="lblMessage" runat="server"></asp:Label>
     <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" CellPadding="4" DataKeyNames="id" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None" Height="50px" Width="246px" OnItemInserted="DetailsView1_ItemInserted">
         <AlternatingRowStyle BackColor="White" />
         <CommandRowStyle BackColor="#D1DDF1" Font-Bold="True" />

@@ -15,8 +15,24 @@ public partial class _Default : System.Web.UI.Page
         }
     }
 
-    protected void DetailsView1_ItemInserted(object sender, DetailsViewInsertedEventArgs e)
+    protected void GridView1_RowDeleted(object sender, GridViewDeletedEventArgs e)
     {
-        GridView1.DataBind();
+        lblMessage.Text = "";
+        if (e.Exception != null)
+        {
+            lblMessage.Text = "A database error has occured...";
+            e.ExceptionHandled = true;
+        }
+        else if (e.AffectedRows == 0)
+        {
+            lblMessage.Text = "For some reason there was no row updated";
+        }
+        else
+        {
+
+            lblMessage.Text = "Successfully updated";
+
+        }
+
     }
 }
