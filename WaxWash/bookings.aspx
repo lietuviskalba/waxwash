@@ -71,6 +71,7 @@
             <asp:Parameter Name="original_total_price" Type="Double" />
         </UpdateParameters>
     </asp:SqlDataSource>
+
     <asp:Label ID="lblMessage" runat="server"></asp:Label>
     <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="282px" AutoGenerateRows="False" CellPadding="4" DataKeyNames="id" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None" OnItemInserted="DetailsView1_ItemInserted">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
