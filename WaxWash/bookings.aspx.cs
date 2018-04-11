@@ -52,6 +52,7 @@ public partial class Default2 : System.Web.UI.Page
         else
         {
 
+
             lblMessage.Text = "Successfully updated";
 
         }

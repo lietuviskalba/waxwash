@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 using System.Collections.ObjectModel;
+using System.Web.Security;
 
 public partial class login : System.Web.UI.Page
 {
@@ -26,7 +27,7 @@ public partial class login : System.Web.UI.Page
     {
         //received input
         string username = txtLoginUsername.Text;
-        string password = txtLoginPassword.Text;
+        string password = FormsAuthentication.HashPasswordForStoringInConfigFile(txtLoginPassword.Text, "MD5");
 
         //logic
         conn.Open();

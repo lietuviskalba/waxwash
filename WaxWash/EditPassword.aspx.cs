@@ -43,9 +43,9 @@ public partial class EditPassword : System.Web.UI.Page
 
     private void UpdatePassword()
     {
-        string currPass = txtCurrPassword.Text;
-        string newPass = txtPassword.Text;// FormsAuthentication.HashPasswordForStoringInConfigFile(txtPassword.Text,"MD5");
-        string repPass = txtPasswordRepeat.Text;
+        string currPass = FormsAuthentication.HashPasswordForStoringInConfigFile(txtCurrPassword.Text, "MD5");
+        string newPass = FormsAuthentication.HashPasswordForStoringInConfigFile(txtPassword.Text,"MD5");
+        string repPass = FormsAuthentication.HashPasswordForStoringInConfigFile(txtPasswordRepeat.Text, "MD5");
         
         if (currPass.Equals(GetCurrPassword()))
         {

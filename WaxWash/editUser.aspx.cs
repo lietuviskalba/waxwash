@@ -93,7 +93,5 @@ public partial class EditUser : System.Web.UI.Page
     {
         string username = Request.QueryString["Username"];
         Response.Redirect("EditPassword.aspx?Username=" + username);
-    }
-
-   
+    }  
 }
