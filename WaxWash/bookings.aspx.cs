@@ -26,8 +26,7 @@ public partial class Default2 : System.Web.UI.Page
         catch (Exception) {
 
             e.ExceptionHandled = true;
-            lblMessage.Text = "Your item has not been inserted. Please try again later";
-           
+            lblMessage.Text = "Your item has not been inserted. Please try again later";       
         }
 
     }
@@ -100,7 +99,6 @@ public partial class Default2 : System.Web.UI.Page
         try
         {
             GridView1.DataBind();
-
         }
         catch(Exception) {
 

@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Security;
+using System.Web.Security;
 
 public partial class register : System.Web.UI.Page
 {
@@ -28,8 +29,8 @@ public partial class register : System.Web.UI.Page
             string lastName = txtLname.Value;
             string address = txtAddress.Value;
             string username = txtRegisterUsername.Value;
-            string password = txtRegisterPassword.Value;
-            string repeatPassword = txtRegisterRepeatPassword.Value;
+            string password = FormsAuthentication.HashPasswordForStoringInConfigFile(txtRegisterPassword.Value, "MD5");
+            string repeatPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(txtRegisterRepeatPassword.Value, "MD5") ;
 
             //logic
             if (password.Equals(repeatPassword))
