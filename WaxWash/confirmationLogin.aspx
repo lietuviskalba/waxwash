@@ -14,7 +14,7 @@
             </h1>
         </div>
         <p>Would you like to update you account? Do so here !<asp:Button ID="btnUpdareAcc" runat="server" OnClick="btnUpdareAcc_Click" Text="Update account" />
-            </a></p>
+            </p>
     </main>
 </asp:Content>
 
