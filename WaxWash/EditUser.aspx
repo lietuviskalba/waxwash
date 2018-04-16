@@ -66,6 +66,15 @@
             <td class="auto-style12">
                 &nbsp;</td>
             <td class="auto-style13">
+                <asp:Button ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Logout" Width="180px" />
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style11">
+                &nbsp;</td>
+            <td class="auto-style12">
+                &nbsp;</td>
+            <td class="auto-style13">
                 &nbsp;</td>
         </tr>
         <tr>
