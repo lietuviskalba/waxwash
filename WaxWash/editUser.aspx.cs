@@ -16,7 +16,9 @@ public partial class EditUser : System.Web.UI.Page
 
     private void SetTextBoxText()
     {
-        string username = Request.QueryString["Username"];
+        //string username = Request.QueryString["Username"];
+        User mu = (User)Session["user"];
+        string username = mu.username;
 
         string setF_Name    = "";
         string setL_Name    = "";
@@ -52,8 +54,12 @@ public partial class EditUser : System.Web.UI.Page
     }  
 
     protected void Page_Load(object sender, EventArgs e)
-    {      
-            SetTextBoxText();                      
+    {
+        //string username = Request.QueryString["Username"];
+        User mu = (User)Session["user"];
+        string username = mu.username;
+        SetTextBoxText();
+        btnLogout.Text = "Logout, " + username;
     }
     
     private void UpdateInfo()
@@ -63,7 +69,9 @@ public partial class EditUser : System.Web.UI.Page
         string newAddress   = txtAddress.Text;
         string newEmail     = txtEmail.Text;
 
-        string username = Request.QueryString["Username"];
+        //string username = Request.QueryString["Username"];
+        User mu = (User)Session["user"];
+        string username = mu.username;
 
         //logic
         conn.Open();
@@ -91,7 +99,18 @@ public partial class EditUser : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        string username = Request.QueryString["Username"];
+        //string username = Request.QueryString["Username"];
+        User mu = (User)Session["user"];
+        string username = mu.username;
         Response.Redirect("EditPassword.aspx?Username=" + username);
-    }  
+    }
+
+    protected void btnLogout_Click(object sender, EventArgs e)
+    {
+        //end session here
+        IsLoggedin.isLoggedIn = false;
+        User u = new User();
+        Session["user"] = null;
+        Server.Transfer("index.aspx", true);
+    }
 }

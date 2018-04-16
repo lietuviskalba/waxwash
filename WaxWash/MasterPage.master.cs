@@ -9,6 +9,19 @@ public partial class index : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        bool islogedin = IsLoggedin.isLoggedIn;
+
+        User mu = (User)Session["user"];
+        if (mu != null)
+        {
+            login.Visible = false;
+            edit_user.Visible = true;
+        }
+        else
+        {
+            edit_user.Visible = false;
+            login.Visible = true;
+        }
         SetActivePage();
     }
     public void SetActivePage()
@@ -28,7 +41,22 @@ public partial class index : System.Web.UI.MasterPage
                 about.Attributes.Add("class", "nav-link active");
                 break;
             case "Login":
-                login.Attributes.Add("class", "nav-link active");
+                bool islogedin = IsLoggedin.isLoggedIn;
+
+                edit_user.Title = "fckkk";
+                edit_user.Disabled = true;
+                if (islogedin == true)
+                {
+                    login.Visible = false;
+                    edit_user.Visible = true;
+                    edit_user.Attributes.Add("class", "nav-link active");
+                }
+                else
+                {
+                    edit_user.Visible = false;
+                    login.Visible = true;
+                    login.Attributes.Add("class", "nav-link active");
+                }
                 break;
         }
     }

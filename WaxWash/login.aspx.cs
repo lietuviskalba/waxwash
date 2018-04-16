@@ -17,6 +17,7 @@ public partial class login : System.Web.UI.Page
     SqlConnection conn = new SqlConnection(change_PATH);
 
     string tableName = "users";
+    static bool isLogedIn = false;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -67,6 +68,7 @@ public partial class login : System.Web.UI.Page
             //Check to see that the password matches from the database
             if (u.password.Equals(password))
             {
+                IsLoggedin.isLoggedIn = true;
                 Session["user"] = u;
                 Response.Redirect("confirmationLogin.aspx?usernameLoginn=" + txtLoginUsername.Text);
                 //Server.Transfer("confirmationLogin.aspx", true);
@@ -80,7 +82,6 @@ public partial class login : System.Web.UI.Page
         {
             lblWarning.Text = "Username is wrong";
         }
-
     }
 
     protected void txtLoginPassword_TextChanged(object sender, EventArgs e)

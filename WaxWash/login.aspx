@@ -64,6 +64,8 @@
                     </td>
                     <td class="auto-style8">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtLoginUsername" ErrorMessage="You need to write your username!" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="UsernameRegValidator1" runat="server" ControlToValidate="txtLoginUsername" Display="Dynamic" ErrorMessage="Username must start with a letter" ValidationExpression="^([a-zA-Z]{1}[a-zA-Z0-9]*)$" ForeColor="#FF0066"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="UsernameRegValidator2" runat="server" ControlToValidate="txtLoginUsername" Display="Dynamic" ErrorMessage="Insert a username made of letters and digits" ValidationExpression="^([a-zA-Z0-9]{1,})$" ForeColor="#FF0066"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
@@ -73,6 +75,10 @@
                     </td>
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLoginPassword" ErrorMessage="You need to write your password!" ForeColor="#FF0066"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="PasswordRegValidator1" runat="server" ControlToValidate="txtLoginPassword" Display="Dynamic" ErrorMessage="Password must be 8 to 16 characters long" ValidationExpression="^([a-zA-Z0-9!*]{8,16})$" ForeColor="#FF0066"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="PasswordRegValidator2" runat="server" ControlToValidate="txtLoginPassword" Display="Dynamic" ErrorMessage="It must start with a letter" ValidationExpression="^([a-zA-Z]{1}[a-zA-Z0-9*!]*)$" ForeColor="#FF0066"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="PasswordRegValidator3" runat="server" ControlToValidate="txtLoginPassword" Display="Dynamic" ErrorMessage="It must contain at least one digit" ValidationExpression=".*[0-9].*" ForeColor="#FF0066"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="PasswordRegValidator4" runat="server" ControlToValidate="txtLoginPassword" Display="Dynamic" ErrorMessage="It must contain at least one * or ! symbol" ValidationExpression=".*[*!].*" ForeColor="#FF0066"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
