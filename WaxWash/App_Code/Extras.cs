@@ -6,15 +6,6 @@ using System.Web;
 /// <summary>
 /// Summary description for Extras
 /// </summary>
-public class Extras
+public class Extras : Product
 {
-    public int extraId;
-    public string name;
-    public float price;
-    public string description;
-    public string image_src;
-
-    public Extras()
-    {
-    }
 }

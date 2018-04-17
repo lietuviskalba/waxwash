@@ -6,15 +6,7 @@ using System.Web;
 /// <summary>
 /// Summary description for Product
 /// </summary>
-public class WashProgram
+public class WashProgram : Product
 {
-    public int id;
-    public string name;
-    public float price;
-    public string description;
-    public string image_src;
-
-    public WashProgram()
-    {
-    }
+    public int Length { get; set; }
 }
