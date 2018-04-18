@@ -9,7 +9,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
     <main>
-             <img alt="logo" src="Images/Better%20images/waxwashlogo.png" />
+             <div class="row justify-content-center"><img alt="logo" style="max-width: 100%; max-height: 100%;"src="Images/Better%20images/waxwashlogo.png"/></div>
        <br />
         <h2 class="text-center">What makes Wax-Wash the best choice to wash your car? </h2>
 
@@ -19,7 +19,7 @@
             <br />
             <br />
         </p>
-        <img style="margin-left: auto; margin-right: auto; display: block;" src="Images/car1.png"/>
+        <img style="margin-left: auto; margin-right: auto; display: block; max-height: 100%; max-width: 100%;" src="Images/car1.png"/>
         <p><br />a car wash right now and don&#39;t worry about losing time at the premises. Schedule the treatment that your car deserves!</p>
 
         <p >
@@ -28,14 +28,15 @@
         </p>
         <br />
         <h1 class="text-center">Car wash options</h1>
-
+        <div style="margin-bottom: 62%;">
         <img alt="full service" style="height: 40%; width: 45%; float: left; margin-left: 2.5%; margin-right: 2.5%; margin-bottom: 5%;" src="Images/Better%20images/full_service.jpg" />
         <img alt="wax" style="height: 40%; width: 45%; float: right; margin-left: 2.5%; margin-right: 2.5%; margin-bottom: 5%;" src="Images/Better%20images/wax_program.png" />
         <img alt="self service" style="height: 40%; width: 45%; float: left; margin-left: 2.5%; margin-right: 2.5%; margin-bottom: 5%;" src="Images/Better%20images/self-service.png" />
         <img alt="in bay" style="height: 40%; width: 45%; float: right; margin-left: 2.5%; margin-right: 2.5%; margin-bottom: 5%;" src="Images/Better%20images/inbay_wash.png" />
         <img alt="wax turbo" style="height: 40%; width: 45%; float: left; margin-left: 2.5%; margin-right: 2.5%; margin-bottom: 5%;" src="Images/Better%20images/turbo_wax.png" />
         <img alt="soap" style="height: 40%; width: 45%; float: right; margin-left: 2.5%; margin-right: 2.5%; margin-bottom: 5%;" src="Images/Better%20images/soak_in_soap.png" />
-    </main>
+        </div>
+     </main>
     <br />
     <p></p>
 </asp:Content>
