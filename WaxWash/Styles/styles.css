@@ -9,8 +9,13 @@
 body {
     margin: 0;
     padding: 0;
+    text-align: center;
     font-family: "Helvetica Neue", Arial, sans-serif;
+    background-image: url("../Images/Background/background_bubbles.png");
+}
 
+table {
+    background-color: white;
 }
 
 footer {
@@ -28,7 +33,7 @@ button {
     color: white;
     border-radius: 4px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    background-color: cornflowerblue;
+    background-color: darkblue;
 }
 
 main {
@@ -103,4 +108,7 @@ h1, h2, h3 {
 .nav li {
     display: inline-block;
     margin-right: -4px;
+}
+img{
+    width:auto;
 }

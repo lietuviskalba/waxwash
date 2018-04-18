@@ -88,4 +88,12 @@ public partial class shopPage : System.Web.UI.Page
         Server.Transfer("shoppingPage.aspx");
     }
 
+<<<<<<< HEAD
+=======
+    public void Reload() {
+
+        var id = ddlWashType.SelectedValue;
+        //var url = Friendly;
+    }
+>>>>>>> 182e62bb805635ac7cdb5a781342e52cb107df43
 }

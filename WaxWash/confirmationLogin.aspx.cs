@@ -11,10 +11,4 @@ public partial class confirmationLogin : System.Web.UI.Page
     {
             lblUsername.Text = Request.QueryString["usernameLoginn"];        
     }
-
-    protected void btnUpdareAcc_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("EditUser.aspx?Username=" + lblUsername.Text);
-        //Server.Transfer("EditUser.aspx", true);
-    }
 }
