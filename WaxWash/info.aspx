@@ -20,7 +20,7 @@
         <h2>Washing programs</h2>
         <div>In-Bay car wash     <b>for 7.00$ </b></div>
         <div>Full service wash   <b>for 15.00$</b></div>
-        <div>Self service wash   <b>for 10.00$</b></div>
+        <div>Self service wash   <b>for 15.00$</b></div>
         <div>Wax wash program    <b>for 20.00$</b></div>
         <div>Soak in soap        <b>for 39.99$</b></div>
         <div>Wax 'n' wash        <b>for 49.99$</b></div>

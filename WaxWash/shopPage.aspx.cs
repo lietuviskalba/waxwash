@@ -56,6 +56,6 @@ public partial class shopPage : System.Web.UI.Page
     public void Reload() {
 
         var id = ddlWashType.SelectedValue;
-        var url = Friendly
+        //var url = Friendly;
     }
 }
