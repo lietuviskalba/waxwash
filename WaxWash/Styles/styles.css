@@ -109,3 +109,6 @@ h1, h2, h3 {
     display: inline-block;
     margin-right: -4px;
 }
+img{
+    width:auto;
+}

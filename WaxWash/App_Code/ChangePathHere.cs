@@ -14,7 +14,7 @@ public class ChangePathHere
     static string guest_PATH = @"Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=..\App_Data\waxwash2.0.mdf;Integrated Security=True;Connect Timeout=30";
 
     //Change the path here
-    public static  string path_CHANGE = guest_PATH;
+    public static  string path_CHANGE = mantas_PATH;
 
 
 }

@@ -87,17 +87,6 @@
                     </td>
                     <td class="auto-style5">
                         <asp:Label ID="lblWarning" runat="server" BorderColor="White" ForeColor="#FF0066"></asp:Label>
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource2">
-                            <Columns>
-                                <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
-                                <asp:BoundField DataField="f_name" HeaderText="f_name" SortExpression="f_name" />
-                                <asp:BoundField DataField="l_name" HeaderText="l_name" SortExpression="l_name" />
-                                <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" />
-                                <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
-                                <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
-                                <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
-                            </Columns>
-                        </asp:GridView>
                     </td>
                     <td>&nbsp;</td>
                 </tr>

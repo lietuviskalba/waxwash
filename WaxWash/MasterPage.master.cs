@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class index : System.Web.UI.MasterPage
 {
-    protected void Page_Load(object sender, EventArgs e)
+    private void UserIsLogedIn()
     {
         bool islogedin = IsLoggedin.isLoggedIn;
 
@@ -22,6 +22,10 @@ public partial class index : System.Web.UI.MasterPage
             edit_user.Visible = false;
             login.Visible = true;
         }
+    }
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        UserIsLogedIn();
         SetActivePage();
     }
     public void SetActivePage()
@@ -41,24 +45,8 @@ public partial class index : System.Web.UI.MasterPage
                 about.Attributes.Add("class", "nav-link active");
                 break;
             case "Login":
-                bool islogedin = IsLoggedin.isLoggedIn;
-
-                edit_user.Title = "fckkk";
-                edit_user.Disabled = true;
-                if (islogedin == true)
-                {
-                    login.Visible = false;
-                    edit_user.Visible = true;
-                    edit_user.Attributes.Add("class", "nav-link active");
-                }
-                else
-                {
-                    edit_user.Visible = false;
-                    login.Visible = true;
-                    login.Attributes.Add("class", "nav-link active");
-                }
+                login.Attributes.Add("class", "nav-link active");
                 break;
         }
     }
 }
-
