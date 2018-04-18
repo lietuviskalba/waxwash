@@ -44,7 +44,7 @@
                         <asp:Label ID="Label8" runat="server" Text="Choose a program"></asp:Label>
                     </td>
                     <td class="auto-style3">
-                        <asp:DropDownList ID="ddlWashType" runat="server" Height="16px" DataSourceID="SqlDataSource2" DataTextField="name" DataValueField="id" OnSelectedIndexChanged="ddlWashType_SelectedIndexChanged">
+                        <asp:DropDownList ID="ddlWashType" runat="server" Height="16px" DataSourceID="SqlDataSource2" DataTextField="name" DataValueField="id">
                         </asp:DropDownList>
                     </td>
                     <td>

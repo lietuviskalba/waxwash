@@ -13,8 +13,8 @@ public class ShoppingCart
         cartItems = new List<CartItem>();
     }
 
-    public int Count() {
-        return cartItems.Count;
+    public int Count{
+       get { return cartItems.Count; }
     }
 
     public CartItem this[int index] {
