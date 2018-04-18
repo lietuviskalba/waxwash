@@ -11,10 +11,10 @@ public class ChangePathHere
     static string matt_PATH = @"//add your path here";
 
     //Any guests please add you path here
-    static string guest_PATH = @"[ADD PATH HERE]";
+    static string guest_PATH = @"Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=..\App_Data\waxwash2.0.mdf;Integrated Security=True;Connect Timeout=30";
 
     //Change the path here
-    public static  string path_CHANGE = mantas_PATH;
+    public static  string path_CHANGE = guest_PATH;
 
 
 }
