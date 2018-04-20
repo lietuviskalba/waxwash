@@ -16,11 +16,13 @@ public partial class index : System.Web.UI.MasterPage
         {
             login.Visible = false;
             edit_user.Visible = true;
+            shopping_cart.Visible = true;
         }
         else
         {
             edit_user.Visible = false;
             login.Visible = true;
+            shopping_cart.Visible = false;
         }
     }
     protected void Page_Load(object sender, EventArgs e)
