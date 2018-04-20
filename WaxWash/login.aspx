@@ -25,28 +25,6 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:C:\USERS\MANTA\DESKTOP\WAXWASH\WAXWASH\APP_DATA\WAXWASH2.0.MDFConnectionString1 %>" DeleteCommand="DELETE FROM [users] WHERE [id] = @id" InsertCommand="INSERT INTO [users] ([f_name], [l_name], [address], [email], [username], [password]) VALUES (@f_name, @l_name, @address, @email, @username, @password)" SelectCommand="SELECT [id], [f_name], [l_name], [address], [email], [username], [password] FROM [users]" UpdateCommand="UPDATE [users] SET [f_name] = @f_name, [l_name] = @l_name, [address] = @address, [email] = @email, [username] = @username, [password] = @password WHERE [id] = @id">
-        <DeleteParameters>
-            <asp:Parameter Name="id" Type="Int32" />
-        </DeleteParameters>
-        <InsertParameters>
-            <asp:Parameter Name="f_name" Type="String" />
-            <asp:Parameter Name="l_name" Type="String" />
-            <asp:Parameter Name="address" Type="String" />
-            <asp:Parameter Name="email" Type="String" />
-            <asp:Parameter Name="username" Type="String" />
-            <asp:Parameter Name="password" Type="String" />
-        </InsertParameters>
-        <UpdateParameters>
-            <asp:Parameter Name="f_name" Type="String" />
-            <asp:Parameter Name="l_name" Type="String" />
-            <asp:Parameter Name="address" Type="String" />
-            <asp:Parameter Name="email" Type="String" />
-            <asp:Parameter Name="username" Type="String" />
-            <asp:Parameter Name="password" Type="String" />
-            <asp:Parameter Name="id" Type="Int32" />
-        </UpdateParameters>
-    </asp:SqlDataSource>
     <main>
         <div>
             <table class="auto-style1">

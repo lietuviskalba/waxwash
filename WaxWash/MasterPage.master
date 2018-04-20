@@ -9,6 +9,7 @@
     <title></title>
     <!-- Latest compiled and minified CSS -->
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
     <link href="Styles/styles.css" rel="stylesheet" />
 
     <asp:ContentPlaceHolder id="head" runat="server">
@@ -42,6 +43,7 @@
                     <li class="nav-item"><a id="about" runat="server" class="nav-link" href="about.aspx">About Us</a></li>
                     <li class="nav-item"><a id="login" runat="server" class="nav-link" href="login.aspx">Login/Register</a></li>
                     <li class="nav-item"><a id="edit_user" runat="server" class="nav-link" href="EditUser.aspx">Your account</a></li>
+                    <li class="nav-item"><a id="shopping_cart" runat="server" class="nav-link" href="shopPage.aspx"><i class="fa fa-shopping-cart"></i></a></li>
                 </ul>
             </div>
             </nav>
@@ -64,7 +66,7 @@
         <p>&copy; Copyright WaxWash Car Wash</p>
         <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825 - Kyung Woog Steve Min 101024241 - Myles Watson 101061621</p>
     </footer>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [users]"></asp:SqlDataSource>
    
    <!-- JavaScript Section -->
     <script src="Scripts/jquery-3.3.1.min.js"></script>
