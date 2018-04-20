@@ -23,8 +23,8 @@
         <p><br />a car wash right now and don&#39;t worry about losing time at the premises. Schedule the treatment that your car deserves!</p>
 
         <p >
-            <button style="margin: 15px 15px 15px 15px; margin-left: auto; margin-right: auto; display: block;" class="button-something" id="btnBookWash" type="button" onclick="location.href='login.aspx'">Book a Wash</button>
-            <button style="margin: 15px 15px 15px 15px; margin-left: auto; margin-right: auto; display: block;" class="button-something" id="btnRegister" type="button" onclick="location.href='register.aspx'">Register</button>
+            <button class="buttom-something" style="margin: 15px 15px 15px 15px; margin-left: auto; margin-right: auto; display: block;" class="button-something" id="btnBookWash" type="button" onclick="location.href='login.aspx'">Book a Wash</button>
+            <button class="button-something" style="margin: 15px 15px 15px 15px; margin-left: auto; margin-right: auto; display: block;" class="button-something" id="btnRegister" type="button" onclick="location.href='register.aspx'">Register</button>
         </p>
         <br />
         <h1 class="text-center">Car wash options</h1>

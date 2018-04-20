@@ -66,10 +66,6 @@
         <p>&copy; Copyright WaxWash Car Wash</p>
         <p>Mantas Lingaitis 101165443 - Bogdan Muntean 101165247 - Matthew Smalley 100973825 - Kyung Woog Steve Min 101024241 - Myles Watson 101061621</p>
     </footer>
-<<<<<<< HEAD
-=======
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [users]"></asp:SqlDataSource>
->>>>>>> 78ae33e9e9358d4b7ff9fff4119d660fb9efe910
    
    <!-- JavaScript Section -->
     <script src="Scripts/jquery-3.3.1.min.js"></script>

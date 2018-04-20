@@ -29,7 +29,7 @@ footer {
     font-size: 10px;
 }
 
-button {
+.button-something{
     color: white;
     border-radius: 4px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -59,7 +59,7 @@ h1, h2, h3 {
     margin: 0;
     padding-bottom: 60px;
 }
-    */
+    
 .nav ul {
     position: fixed;
     width: 100%;
@@ -94,21 +94,22 @@ h1, h2, h3 {
         color: #444;
         cursor: default;
     }
-
+*
 @media screen and (min-width: 600px) {
-    .nav li {
+    /.nav li {
         width: 120px;
         border-bottom: none;
         height: 50px;
         line-height: 50px;
         font-size: 1.4em;
     }
+    */
 }
-
+/*
 .nav li {
     display: inline-block;
     margin-right: -4px;
-}
+}*/
 img{
     width:auto;
 }
