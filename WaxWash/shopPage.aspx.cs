@@ -36,7 +36,7 @@ public partial class shopPage : System.Web.UI.Page
     private Product GetSelectedWash() {
 
         DataView productTable = (DataView)SqlDataSource2.Select(DataSourceSelectArguments.Empty);
-        productTable.RowFilter = "ProductID = '" + ddlWashType.SelectedValue + "'";
+        productTable.RowFilter = "id = '" + ddlWashType.SelectedValue + "'";
         DataRowView row = productTable[0];
 
         WashProgram p = new WashProgram();
@@ -52,7 +52,7 @@ public partial class shopPage : System.Web.UI.Page
     {
 
         DataView productTable = (DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty);
-        productTable.RowFilter = "ProductID = '" + ddlWashType.SelectedValue + "'";
+        productTable.RowFilter = "id = '" + ddlWashType.SelectedValue + "'";
         DataRowView row = productTable[0];
 
         Extras p = new Extras();
