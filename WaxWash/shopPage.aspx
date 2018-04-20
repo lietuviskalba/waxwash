@@ -81,7 +81,9 @@
                     <td class="auto-style4">
                         <asp:Button ID="btnSelectWash" runat="server" OnClick="btnSelectWash_Click" Text="Select Wash" />
                     </td>
-                    <td class="auto-style5"></td>
+                    <td class="auto-style5">
+                        <asp:Label ID="lblBug" runat="server" Text="Label"></asp:Label>
+                    </td>
                     <td class="auto-style6"></td>
                 </tr>
                 <tr>

@@ -5,12 +5,15 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Data.SqlClient;
 
 public partial class shopPage : System.Web.UI.Page
 {
 
     private Product selectedProduct;
     private Product itemProduct;
+
+    string dbProgramID;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -41,10 +44,12 @@ public partial class shopPage : System.Web.UI.Page
         p.Id = row["id"].ToString();
         p.Name = row["name"].ToString();
         p.Price = Convert.ToDecimal(row["price"]);
- 
         p.Description = row["description"].ToString();
+        dbProgramID = p.Id;
+        lblBug.Text = p.Id;
         return p;
     }
+
     private Product GetSelectedExtra()
     {
 
@@ -81,9 +86,37 @@ public partial class shopPage : System.Web.UI.Page
             }
         }
     }
+    private void SaveBookToDB()
+    {
+        int clientID;
+        string programID;
+        double amount;
+        double programPrice;
+        double extraPrice;
+        double totalPrice;
 
+        //get the ids
+        User u = (User)Session["user"];
+        clientID = u.userId;
+        programID = dbProgramID;//itemProduct.Id;
+        //get the values for total price
+        amount = Convert.ToDouble( txtAmount.Text);
+        programPrice = Convert.ToDouble( lblPrice.Text);
+        extraPrice = Convert.ToDouble(lblItemPrice.Text);
+        totalPrice = programPrice + (extraPrice * amount);
+        //save to DB
+        SqlConnection conn = new SqlConnection(ChangePathHere.path_CHANGE);
+        conn.Open();
+        SqlCommand cmd = conn.CreateCommand();
+        cmd.CommandType = CommandType.Text;
+        cmd.CommandText = "INSERT INTO bookings VALUES('" + programID + "', '" + clientID + "', '" + totalPrice + "')";
+        cmd.ExecuteNonQuery();
+        conn.Close();
+
+    }
     protected void btnConfirm_Click(object sender, EventArgs e)
     {
+        SaveBookToDB();
         Server.Transfer("ShopPageList.aspx");
     }
 
