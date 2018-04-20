@@ -63,6 +63,7 @@ public partial class login : System.Web.UI.Page
                 lblWarning.Text = u.username;
                 dr.Close();
             }
+
             string passwordCheck = cmmd.ExecuteScalar().ToString().Replace(" ", "");
             conn.Close();
             //Check to see that the password matches from the database
@@ -72,6 +73,14 @@ public partial class login : System.Web.UI.Page
                 Session["user"] = u;
                 Response.Redirect("confirmationLogin.aspx?usernameLoginn=" + txtLoginUsername.Text);
                 //Server.Transfer("confirmationLogin.aspx", true);
+            }
+            else if (u.f_name == txtLoginUsername.Text) {
+                if (u.password == txtLoginPassword.Text) {
+
+                    IsLoggedin.isLoggedIn = true;
+                    Session["user"] = u;
+                    Server.Transfer("bookings.aspx", true);
+                }
             }
             else
             {

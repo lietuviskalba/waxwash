@@ -49,36 +49,6 @@
         </h3>
         <h3 style="width: 495px">
             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="rdlWebService" Display="Dynamic" ErrorMessage="Ups! You forgot to give us feedback on the Web Services"></asp:RequiredFieldValidator>
-            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [feedback] WHERE [id] = @id" InsertCommand="INSERT INTO [feedback] ([user_id_fk], [program_id_fk], [price], [length], [cust_service], [web_service], [program_qual], [overall], [title], [other]) VALUES (@user_id_fk, @program_id_fk, @price, @length, @cust_service, @web_service, @program_qual, @overall, @title, @other)" SelectCommand="SELECT * FROM [feedback]" UpdateCommand="UPDATE [feedback] SET [user_id_fk] = @user_id_fk, [program_id_fk] = @program_id_fk, [price] = @price, [length] = @length, [cust_service] = @cust_service, [web_service] = @web_service, [program_qual] = @program_qual, [overall] = @overall, [title] = @title, [other] = @other WHERE [id] = @id">
-                <DeleteParameters>
-                    <asp:Parameter Name="id" Type="Int32" />
-                </DeleteParameters>
-                <InsertParameters>
-                    <asp:Parameter Name="user_id_fk" Type="Int32" />
-                    <asp:Parameter Name="program_id_fk" Type="Int32" />
-                    <asp:Parameter Name="price" Type="Int32" />
-                    <asp:Parameter Name="length" Type="Int32" />
-                    <asp:Parameter Name="cust_service" Type="Int32" />
-                    <asp:Parameter Name="web_service" Type="Int32" />
-                    <asp:Parameter Name="program_qual" Type="Int32" />
-                    <asp:Parameter Name="overall" Type="Int32" />
-                    <asp:Parameter Name="title" Type="String" />
-                    <asp:Parameter Name="other" Type="String" />
-                </InsertParameters>
-                <UpdateParameters>
-                    <asp:Parameter Name="user_id_fk" Type="Int32" />
-                    <asp:Parameter Name="program_id_fk" Type="Int32" />
-                    <asp:Parameter Name="price" Type="Int32" />
-                    <asp:Parameter Name="length" Type="Int32" />
-                    <asp:Parameter Name="cust_service" Type="Int32" />
-                    <asp:Parameter Name="web_service" Type="Int32" />
-                    <asp:Parameter Name="program_qual" Type="Int32" />
-                    <asp:Parameter Name="overall" Type="Int32" />
-                    <asp:Parameter Name="title" Type="String" />
-                    <asp:Parameter Name="other" Type="String" />
-                    <asp:Parameter Name="id" Type="Int32" />
-                </UpdateParameters>
-            </asp:SqlDataSource>
         </h3>
         <div>
             <table class="auto-style1">

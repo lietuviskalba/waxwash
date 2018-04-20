@@ -18,73 +18,83 @@ public partial class shopPage : System.Web.UI.Page
 
             ddlWashType.DataBind();
             ddlItems.DataBind();
+
         }
 
         selectedProduct = this.GetSelectedWash();
         lblDescription.Text = selectedProduct.Description;
         lblPrice.Text = selectedProduct.Price.ToString();
-        Label6.Text = selectedProduct.Image_src;
 
         itemProduct = this.GetSelectedExtra();
         lblItemDescription.Text = itemProduct.Description;
         lblItemPrice.Text = itemProduct.Price.ToString();
-        Label7.Text = itemProduct.Image_src;
-        txtAmount.Text = "0";
 
     }
 
     private Product GetSelectedWash() {
 
-        DataView productTable = (DataView)SqlDataSource2.Select(DataSourceSelectArguments.Empty);
+        DataView productTable = (DataView)SqlDataSource1.Select(DataSourceSelectArguments.Empty);
         productTable.RowFilter = "id = '" + ddlWashType.SelectedValue + "'";
         DataRowView row = productTable[0];
 
-        WashProgram p = new WashProgram();
-        p.Id = Convert.ToInt32(row["id"]);
+        Product p = new Product();
+        p.Id = row["id"].ToString();
         p.Name = row["name"].ToString();
         p.Price = Convert.ToDecimal(row["price"]);
-        p.Length = Convert.ToInt32(row["length"]);
+ 
         p.Description = row["description"].ToString();
-        p.Image_src = row["image_src"].ToString();
         return p;
     }
     private Product GetSelectedExtra()
     {
 
-        DataView productTable = (DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty);
-        productTable.RowFilter = "id = '" + ddlWashType.SelectedValue + "'";
-        DataRowView row = productTable[0];
+        DataView extraTable = (DataView)SqlDataSource2.Select(DataSourceSelectArguments.Empty);
+        extraTable.RowFilter = "id = '" + ddlItems.SelectedValue + "'";
+        DataRowView extraRow = extraTable[0];
 
-        Extras p = new Extras();
-        p.Id = Convert.ToInt32(row["id"]);
-        p.Name = row["name"].ToString();
-        p.Price = Convert.ToDecimal(row["price"]);
-        p.Description = row["description"].ToString();
-        p.Image_src = row["image_src"].ToString();
-        return p;
+        Product e = new Product();
+        e.Id = extraRow["id"].ToString();
+        e.Name = extraRow["name"].ToString();
+        e.Price = Convert.ToDecimal(extraRow["price"]);
+        e.Description = extraRow["description"].ToString();
+        return e;
     }
 
 
     protected void btnItemAdd_Click(object sender, EventArgs e)
     {
-
-        if (Page.IsValid) {
-
+        if (Page.IsValid)
+        {
+            // get cart from session and selected item from cart
             ShoppingCart cart = ShoppingCart.GetCart();
-            CartItem cartItem = cart[selectedProduct.Id];
+            CartItem cartItem = cart[itemProduct.Id];
 
+            // if item isn’t in cart, add it; otherwise, increase its quantity
             if (cartItem == null)
             {
-                cart.AddItem(selectedProduct, 1);
+                int sth = Convert.ToInt32(txtAmount.Text);
+                cart.AddItem(itemProduct, sth);
             }
-            else {
-                
+            else
+            {
+                cartItem.AddQuantity(Convert.ToInt32(txtAmount.Text));
             }
         }
     }
 
     protected void btnConfirm_Click(object sender, EventArgs e)
     {
-        Server.Transfer("shoppingPage.aspx");
+        Server.Transfer("ShopPageList.aspx");
+    }
+
+    protected void btnSelectWash_Click(object sender, EventArgs e)
+    {
+        if (Page.IsValid) {
+            ShoppingCart cart = ShoppingCart.GetCart();
+            CartItem cartItem = cart[selectedProduct.Id];
+
+           cart.AddItem(selectedProduct, 1);
+            
+        }
     }
 }

@@ -27,7 +27,7 @@ public class ShoppingCart
         get
         {
             foreach (CartItem c in cartItems)
-                if (c.Product.Id.ToString() == id) return c;
+                if (c.Product.Id == id) return c;
             return null;
         }
     }
@@ -51,6 +51,7 @@ public class ShoppingCart
     public void RemoveAt(int index) {
         cartItems.RemoveAt(index);
     }
+
 
     public void Clear() {
         cartItems.Clear();

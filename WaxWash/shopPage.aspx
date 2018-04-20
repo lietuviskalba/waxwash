@@ -44,11 +44,12 @@
                         <asp:Label ID="Label8" runat="server" Text="Choose a program"></asp:Label>
                     </td>
                     <td class="auto-style3">
-                        <asp:DropDownList ID="ddlWashType" runat="server" Height="16px" DataSourceID="SqlDataSource2" DataTextField="name" DataValueField="id">
+                        <asp:DropDownList ID="ddlWashType" runat="server" Height="16px" DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="id" AutoPostBack="True">
                         </asp:DropDownList>
                     </td>
                     <td>
-                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:waxwash2.0ConnectionString %>" SelectCommand="SELECT * FROM [programs]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:WorkingWash %>" SelectCommand="SELECT * FROM [programs]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:WorkingWash %>" SelectCommand="SELECT * FROM [extras]"></asp:SqlDataSource>
                     </td>
                 </tr>
                 <tr>
@@ -59,8 +60,7 @@
                         <asp:Label ID="lblPrice" runat="server"></asp:Label>
                     </td>
                     <td>
-                        <asp:Label ID="Label6" runat="server" Text="[IMAGE GOES HERE]"></asp:Label>
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2">
@@ -79,6 +79,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style4">
+                        <asp:Button ID="btnSelectWash" runat="server" OnClick="btnSelectWash_Click" Text="Select Wash" />
                     </td>
                     <td class="auto-style5"></td>
                     <td class="auto-style6"></td>
@@ -88,12 +89,11 @@
                         <asp:Label ID="Label9" runat="server" Text="Add extras"></asp:Label>
                     </td>
                     <td class="auto-style8">
-        <asp:DropDownList ID="ddlItems" runat="server" DataSourceID="SqlDataSource3" DataTextField="name" DataValueField="id">
+        <asp:DropDownList ID="ddlItems" runat="server" DataSourceID="SqlDataSource2" DataTextField="name" DataValueField="id" AutoPostBack="True">
         </asp:DropDownList>
                     </td>
                     <td class="auto-style9">
-                        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:waxwash2.0ConnectionString %>" SelectCommand="SELECT * FROM [extras]"></asp:SqlDataSource>
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2">
@@ -112,8 +112,7 @@
                         <asp:Label ID="lblItemDescription" runat="server"></asp:Label>
                     </td>
                     <td>
-        <asp:Label ID="Label7" runat="server" Text="[IMAGE GOES HERE]"></asp:Label>
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2">

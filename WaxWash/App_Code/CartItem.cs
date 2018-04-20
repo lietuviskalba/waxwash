@@ -21,11 +21,7 @@ public class CartItem
     }
 
     public void AddQuantity(int quantity){
-
-        if (!(this.Product is WashProgram)) {
-
-            this.Quantity += quantity;
-        }
+            this.Quantity += quantity;        
     }
 
     public string Display() {
