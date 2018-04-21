@@ -10,7 +10,7 @@ public class CartItem
 {
 
     public Product Product { get; set; }
-    int Quantity { get; set; }
+    public int Quantity { get; set; }
 
     public CartItem(){ }
 

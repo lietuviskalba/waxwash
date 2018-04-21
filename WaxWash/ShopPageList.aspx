@@ -44,7 +44,7 @@
         <br />
         <br />
         <asp:Button ID="btnContinue" runat="server" PostBackUrl="~/shopPage.aspx" Text="Continue Shopping" />
-        <asp:Button ID="btnConfirm" runat="server" Text="Confirm Order" />
+        <asp:Button ID="btnConfirm" runat="server" Text="Confirm Order" OnClick="btnConfirm_Click" />
         <br />
 </asp:Content>
 

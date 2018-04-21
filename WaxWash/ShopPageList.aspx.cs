@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -58,4 +60,26 @@ public partial class _Default : System.Web.UI.Page
 
     }
 
+    protected void btnConfirm_Click(object sender, EventArgs e)
+    {
+        // Get data for the booking
+        int clientID = ((User)Session["user"]).userId;
+        int programID = Convert.ToInt32(Session["program"]);
+        decimal totalPrice = 0;
+
+        cart = ShoppingCart.GetCart();
+
+        for (int i = 0; i < cart.Count; i++) {
+            totalPrice += (cart[i].Product.Price * cart[i].Quantity);
+        }
+        //save to DB
+        SqlConnection conn = new SqlConnection(ChangePathHere.path_CHANGE);
+        conn.Open();
+        SqlCommand cmd = conn.CreateCommand();
+        cmd.CommandType = CommandType.Text;
+        cmd.CommandText = "INSERT INTO bookings VALUES('" + programID + "', '" + clientID + "', '" + totalPrice + "')";
+        cmd.ExecuteNonQuery();
+        conn.Close();
+        lblMessage.Text = "Your booking is saved. Congratulations!";
+    }
 }

@@ -48,5 +48,76 @@
         <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
         <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
     </asp:DetailsView>
+      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:WorkingWash %>" DeleteCommand="DELETE FROM [users] WHERE [id] = @original_id AND [f_name] = @original_f_name AND [l_name] = @original_l_name AND (([address] = @original_address) OR ([address] IS NULL AND @original_address IS NULL)) AND [email] = @original_email AND [username] = @original_username AND [password] = @original_password" InsertCommand="INSERT INTO [users] ([f_name], [l_name], [address], [email], [username], [password]) VALUES (@f_name, @l_name, @address, @email, @username, @password)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [users]" UpdateCommand="UPDATE [users] SET [f_name] = @f_name, [l_name] = @l_name, [address] = @address, [email] = @email, [username] = @username, [password] = @password WHERE [id] = @original_id AND [f_name] = @original_f_name AND [l_name] = @original_l_name AND (([address] = @original_address) OR ([address] IS NULL AND @original_address IS NULL)) AND [email] = @original_email AND [username] = @original_username AND [password] = @original_password">
+          <DeleteParameters>
+              <asp:Parameter Name="original_id" Type="Int32" />
+              <asp:Parameter Name="original_f_name" Type="String" />
+              <asp:Parameter Name="original_l_name" Type="String" />
+              <asp:Parameter Name="original_address" Type="String" />
+              <asp:Parameter Name="original_email" Type="String" />
+              <asp:Parameter Name="original_username" Type="String" />
+              <asp:Parameter Name="original_password" Type="String" />
+          </DeleteParameters>
+          <InsertParameters>
+              <asp:Parameter Name="f_name" Type="String" />
+              <asp:Parameter Name="l_name" Type="String" />
+              <asp:Parameter Name="address" Type="String" />
+              <asp:Parameter Name="email" Type="String" />
+              <asp:Parameter Name="username" Type="String" />
+              <asp:Parameter Name="password" Type="String" />
+          </InsertParameters>
+          <UpdateParameters>
+              <asp:Parameter Name="f_name" Type="String" />
+              <asp:Parameter Name="l_name" Type="String" />
+              <asp:Parameter Name="address" Type="String" />
+              <asp:Parameter Name="email" Type="String" />
+              <asp:Parameter Name="username" Type="String" />
+              <asp:Parameter Name="password" Type="String" />
+              <asp:Parameter Name="original_id" Type="Int32" />
+              <asp:Parameter Name="original_f_name" Type="String" />
+              <asp:Parameter Name="original_l_name" Type="String" />
+              <asp:Parameter Name="original_address" Type="String" />
+              <asp:Parameter Name="original_email" Type="String" />
+              <asp:Parameter Name="original_username" Type="String" />
+              <asp:Parameter Name="original_password" Type="String" />
+          </UpdateParameters>
+      </asp:SqlDataSource>
+      <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:WorkingWash %>" DeleteCommand="DELETE FROM [users] WHERE [id] = @original_id AND [f_name] = @original_f_name AND [l_name] = @original_l_name AND (([address] = @original_address) OR ([address] IS NULL AND @original_address IS NULL)) AND [email] = @original_email AND [username] = @original_username AND [password] = @original_password" InsertCommand="INSERT INTO [users] ([f_name], [l_name], [address], [email], [username], [password]) VALUES (@f_name, @l_name, @address, @email, @username, @password)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [users] WHERE ([id] = @id)" UpdateCommand="UPDATE [users] SET [f_name] = @f_name, [l_name] = @l_name, [address] = @address, [email] = @email, [username] = @username, [password] = @password WHERE [id] = @original_id AND [f_name] = @original_f_name AND [l_name] = @original_l_name AND (([address] = @original_address) OR ([address] IS NULL AND @original_address IS NULL)) AND [email] = @original_email AND [username] = @original_username AND [password] = @original_password">
+          <DeleteParameters>
+              <asp:Parameter Name="original_id" Type="Int32" />
+              <asp:Parameter Name="original_f_name" Type="String" />
+              <asp:Parameter Name="original_l_name" Type="String" />
+              <asp:Parameter Name="original_address" Type="String" />
+              <asp:Parameter Name="original_email" Type="String" />
+              <asp:Parameter Name="original_username" Type="String" />
+              <asp:Parameter Name="original_password" Type="String" />
+          </DeleteParameters>
+          <InsertParameters>
+              <asp:Parameter Name="f_name" Type="String" />
+              <asp:Parameter Name="l_name" Type="String" />
+              <asp:Parameter Name="address" Type="String" />
+              <asp:Parameter Name="email" Type="String" />
+              <asp:Parameter Name="username" Type="String" />
+              <asp:Parameter Name="password" Type="String" />
+          </InsertParameters>
+          <SelectParameters>
+              <asp:ControlParameter ControlID="GridView1" Name="id" PropertyName="SelectedValue" Type="Int32" />
+          </SelectParameters>
+          <UpdateParameters>
+              <asp:Parameter Name="f_name" Type="String" />
+              <asp:Parameter Name="l_name" Type="String" />
+              <asp:Parameter Name="address" Type="String" />
+              <asp:Parameter Name="email" Type="String" />
+              <asp:Parameter Name="username" Type="String" />
+              <asp:Parameter Name="password" Type="String" />
+              <asp:Parameter Name="original_id" Type="Int32" />
+              <asp:Parameter Name="original_f_name" Type="String" />
+              <asp:Parameter Name="original_l_name" Type="String" />
+              <asp:Parameter Name="original_address" Type="String" />
+              <asp:Parameter Name="original_email" Type="String" />
+              <asp:Parameter Name="original_username" Type="String" />
+              <asp:Parameter Name="original_password" Type="String" />
+          </UpdateParameters>
+      </asp:SqlDataSource>
 </asp:Content>
 
